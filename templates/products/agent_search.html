@@ -1,0 +1,645 @@
+{% extends "base.html" %}
+
+{% block title %}Agent Search | Ecommerce{% endblock %}
+
+{% block content %}
+<style>
+    .agent-search-container {
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 0 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .search-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        margin-bottom: 24px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .search-input-group {
+        display: flex;
+        gap: 12px;
+    }
+
+    .search-input-group input {
+        flex: 1;
+        padding: 14px 18px;
+        font-size: 16px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+    .search-input-group input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .search-input-group button {
+        padding: 14px 28px;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #2563eb;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .search-input-group button:hover {
+        background-color: #1d4ed8;
+    }
+
+    /* Payload Execution Monitor */
+    .monitor-card {
+        background-color: #0f172a;
+        color: #38bdf8;
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin-top: 16px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 13px;
+    }
+
+    .monitor-card header {
+        color: #94a3b8;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+        font-size: 11px;
+    }
+
+    .monitor-card pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+
+    /* Results Layout */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+        margin-top: 24px;
+    }
+
+    .product-card {
+        background: #ffffff;
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .product-image-wrap {
+        width: 100%;
+        height: 180px;
+        background-color: #f8fafc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .product-image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-info {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .category-badge {
+        display: inline-block;
+        background: #eff6ff;
+        color: #2563eb;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 8px;
+        border-radius: 4px;
+        width: fit-content;
+        margin-bottom: 8px;
+    }
+
+    .product-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0f172a;
+        margin: 0 0 6px 0;
+    }
+
+    .product-price {
+        font-size: 18px;
+        font-weight: 700;
+        color: #16a34a;
+        margin-bottom: 12px;
+    }
+
+    .view-btn {
+        display: block;
+        text-align: center;
+        background-color: #f1f5f9;
+        color: #334155;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: background-color 0.2s;
+        margin-top: auto;
+    }
+
+    .view-btn:hover {
+        background-color: #e2e8f0;
+    }
+
+    .status-msg {
+        text-align: center;
+        padding: 40px;
+        color: #64748b;
+        font-size: 16px;
+    }
+</style>
+
+<div class="agent-search-container">
+    <h2>Natural Language Product &amp; Order Search</h2>
+    <p style="color: #64748b;">Try natural prompts like: <em>"Laptops under 500 dollars"</em> or <em>"Show my orders"</em></p>
+
+    <!-- Search Bar -->
+    <div class="search-card">
+        <div class="search-input-group">
+            <input 
+                type="text" 
+                id="agent-prompt-input" 
+                placeholder="What are you looking for?"
+                onkeyup="if(event.key === 'Enter') performAgentSearch()"
+            >
+            <button onclick="performAgentSearch()">Execute Search</button>
+        </div>
+
+        <!-- Tool Payload Execution Monitor -->
+        <div class="monitor-card">
+            <header>⚡ Agent Tool Execution Payload &amp; Arguments</header>
+            <pre id="payload-display">// Waiting for user input...</pre>
+        </div>
+    </div>
+
+    <!-- Dynamic Results Wrapper -->
+    <div id="results-wrapper">
+        <div class="status-msg">Enter a search prompt above to execute the agent tool.</div>
+    </div>
+</div>
+<script>
+
+async function performAgentSearch() {
+
+    const inputField =
+        document.getElementById(
+            "agent-prompt-input"
+        );
+
+    const payloadDisplay =
+        document.getElementById(
+            "payload-display"
+        );
+
+    const resultsWrapper =
+        document.getElementById(
+            "results-wrapper"
+        );
+
+
+    const promptText =
+        inputField.value.trim();
+
+
+    if (!promptText) {
+        return;
+    }
+
+
+    resultsWrapper.innerHTML = `
+        <div class="status-msg">
+            Parsing prompt and querying orchestrator...
+        </div>
+    `;
+
+
+    payloadDisplay.innerText =
+        "// Extracting parameters via agent...";
+
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/agent-search/",
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json",
+
+                        "X-CSRFToken":
+                            "{{ csrf_token }}"
+
+                    },
+
+                    body: JSON.stringify({
+                        prompt: promptText
+                    })
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            data.status !== "success"
+        ) {
+
+            resultsWrapper.innerHTML = `
+
+                <div
+                    class="status-msg"
+                    style="color:#ef4444;"
+                >
+
+                    ${data.message || data.error || "Unknown error."}
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        // ==================================================
+        // DISPLAY TOOL PAYLOAD
+        // ==================================================
+
+        payloadDisplay.innerText =
+            JSON.stringify(
+
+                {
+                    tool_called:
+                        data.tool_called || null,
+
+                    action:
+                        data.action || null,
+
+                    arguments_passed:
+                        data.arguments || {}
+
+                },
+
+                null,
+
+                2
+
+            );
+
+
+        // ==================================================
+        // PRODUCT SEARCH
+        // ==================================================
+
+        if (
+            data.action === "product_search"
+            ||
+            data.tool_called === "search_products_tool"
+        ) {
+
+            const resultData =
+                data.data || {};
+
+            const products =
+                resultData.products || [];
+
+
+            if (!products.length) {
+
+                resultsWrapper.innerHTML = `
+
+                    <div class="status-msg">
+                        No products matched your search.
+                    </div>
+
+                `;
+
+                return;
+            }
+
+
+            let html =
+                `<div class="products-grid">`;
+
+
+            products.forEach(
+                product => {
+
+                    const image =
+                        product.image_url
+
+                        ?
+
+                        `
+                        <img
+                            src="${product.image_url}"
+                            alt="${product.name}"
+                        >
+                        `
+
+                        :
+
+                        `
+                        <div>
+                            No Image
+                        </div>
+                        `;
+
+
+                    html += `
+
+                        <div class="product-card">
+
+                            <div class="product-image-wrap">
+                                ${image}
+                            </div>
+
+                            <div class="product-info">
+
+                                <span class="category-badge">
+                                    ${product.category || "General"}
+                                </span>
+
+                                <h3 class="product-title">
+                                    ${product.name}
+                                </h3>
+
+                                <div class="product-price">
+                                    $${product.price}
+                                </div>
+
+                                <a
+                                    href="${product.url || "#"}"
+                                    class="view-btn"
+                                >
+                                    View Product
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+                }
+            );
+
+
+            html += `</div>`;
+
+
+            resultsWrapper.innerHTML =
+                html;
+
+
+            return;
+        }
+
+
+        // ==================================================
+        // ORDER LIST
+        // ==================================================
+
+        if (
+            data.action === "list"
+            ||
+            data.navigation === "order_list"
+        ) {
+
+            window.location.href =
+                "{% url 'orders:order_list' %}";
+
+            return;
+        }
+
+
+        // ==================================================
+        // SPECIFIC ORDER
+        // ==================================================
+
+        if (
+            data.action === "specific"
+        ) {
+
+            const orderId =
+                data.arguments
+                &&
+                data.arguments.order_id;
+
+
+            if (orderId) {
+
+                window.location.href =
+                    `/orders/${orderId}/`;
+
+                return;
+            }
+        }
+
+
+        // ==================================================
+        // TRACK ORDER
+        // ==================================================
+
+        if (
+            data.action === "track"
+        ) {
+
+            const orderId =
+                data.arguments
+                &&
+                data.arguments.order_id;
+
+
+            if (orderId) {
+
+                window.location.href =
+                    `/orders/${orderId}/`;
+
+                return;
+            }
+        }
+
+
+        // ==================================================
+        // CANCEL ORDER
+        // ==================================================
+
+        if (
+            data.action === "cancel"
+            &&
+            data.confirmation_required === true
+        ) {
+
+            const orderId =
+                data.order_id
+                ||
+                (
+                    data.arguments
+                    &&
+                    data.arguments.cancel_order_id
+                );
+
+
+            if (orderId) {
+
+                showCancelConfirmation(
+                    orderId
+                );
+
+                return;
+            }
+        }
+
+
+        // ==================================================
+        // FALLBACK
+        // ==================================================
+
+        const resultData =
+            data.data || {};
+
+
+        resultsWrapper.innerHTML = `
+
+            <div class="status-msg">
+
+                ${resultData.message || data.message || "Request completed."}
+
+            </div>
+
+        `;
+
+    }
+
+    catch (error) {
+
+        console.error(
+            error
+        );
+
+
+        resultsWrapper.innerHTML = `
+
+            <div
+                class="status-msg"
+                style="color:#ef4444;"
+            >
+
+                An unexpected error occurred.
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+// ==========================================================
+// CANCEL CONFIRMATION
+// ==========================================================
+
+function showCancelConfirmation(
+    orderId
+) {
+
+    const confirmed =
+        confirm(
+            `Are you sure you want to cancel Order #${orderId}?`
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    const form =
+        document.createElement(
+            "form"
+        );
+
+
+    form.method =
+        "POST";
+
+
+    form.action =
+        `/orders/${orderId}/cancel/`;
+
+
+    const csrf =
+        document.createElement(
+            "input"
+        );
+
+
+    csrf.type =
+        "hidden";
+
+
+    csrf.name =
+        "csrfmiddlewaretoken";
+
+
+    csrf.value =
+        "{{ csrf_token }}";
+
+
+    form.appendChild(
+        csrf
+    );
+
+
+    document.body.appendChild(
+        form
+    );
+
+
+    form.submit();
+
+}
+
+</script>
+{% endblock %}

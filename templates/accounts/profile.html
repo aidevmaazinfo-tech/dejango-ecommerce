@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile - DevStore{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto space-y-8">
+    <!-- User Header Card -->
+    <div class="card bg-base-100 border border-base-300 p-6 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+        <div class="avatar placeholder">
+            <div class="bg-primary text-primary-content rounded-full w-20">
+                <span class="text-2xl font-black">{{ user.username|slice:":2"|upper }}</span>
+            </div>
+        </div>
+        <div class="text-center sm:text-left flex-1">
+            <h1 class="text-2xl font-extrabold">{{ user.username }}</h1>
+            <p class="text-xs text-base-content/60">{{ user.email }}</p>
+            
+            <!-- Quick contact & address preview -->
+            <div class="mt-2 text-xs text-base-content/80 space-y-1">
+                <p><span class="font-semibold">Phone:</span> {{ user.phone_number|default:"Not set" }}</p>
+                <p><span class="font-semibold">Shipping Address:</span> {{ user.shipping_address|default:"Not set" }}</p>
+            </div>
+
+            <div class="mt-3 flex flex-wrap justify-center sm:justify-start gap-2">
+                <span class="badge badge-primary badge-sm font-semibold">{{ user.get_role_display }}</span>
+                <span class="badge badge-ghost badge-sm text-base-content/60">Joined {{ user.date_joined|date:"M Y" }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Edit Profile Form -->
+        <div class="card bg-base-100 border border-base-300 p-6 shadow-sm h-fit">
+            <h2 class="text-lg font-bold mb-4 pb-2 border-b border-base-300">Edit Profile</h2>
+            
+            <form method="post" class="space-y-4">
+                {% csrf_token %}
+                
+                {% for field in form %}
+                    <div class="form-control">
+                        <label class="label text-xs font-bold text-base-content/80">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <span class="text-error text-[10px] mt-1">{{ field.errors.0 }}</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+                <button type="submit" class="btn btn-primary btn-sm btn-block mt-4 rounded-xl">
+                    Save Changes
+                </button>
+            </form>
+        </div>
+
+        <!-- Order History Table -->
+        <div class="lg:col-span-2 card bg-base-100 border border-base-300 p-6 shadow-sm">
+            <h2 class="text-lg font-bold mb-4 pb-2 border-b border-base-300">Recent Orders</h2>
+            
+            {% if orders %}
+                <div class="overflow-x-auto">
+                    <table class="table table-sm w-full">
+                        <thead>
+                            <tr class="text-xs text-base-content/70">
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr class="hover:bg-base-200/50 transition-colors">
+                                    <td class="font-mono font-bold text-xs text-primary"># {{ order.id }}</td>
+                                    <td class="text-xs">{{ order.created_at|date:"M d, Y" }}</td>
+                                    <td class="font-bold text-xs">${{ order.total_price }}</td>
+                                    <td>
+                                        {% if order.payment_status == 'COMPLETED' %}
+                                            <span class="badge badge-success badge-xs font-semibold">Completed</span>
+                                        {% elif order.payment_status == 'PENDING' %}
+                                            <span class="badge badge-warning badge-xs font-semibold">Pending</span>
+                                        {% else %}
+                                            <span class="badge badge-error badge-xs font-semibold">Failed</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-ghost badge-xs font-medium">{{ order.get_order_status_display }}</span>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="py-12 text-center bg-base-200/40 rounded-2xl border border-dashed border-base-300">
+                    <p class="text-xs text-base-content/60 font-medium">You haven't placed any orders yet.</p>
+                    <a href="{% url 'products:product_list' %}" class="btn btn-primary btn-xs mt-3 rounded-lg">Explore Products</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

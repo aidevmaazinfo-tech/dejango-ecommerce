@@ -1,0 +1,2 @@
+sku,name,description,price,stock_count,category,image_url
+TEST-001,Test Wireless Mouse,This is a test product for the automatic CSV product agent.,2500,10,Computer Accessories,https://dummyimage.com/600x600/eeeeee/000000.png&text=Test+Mouse

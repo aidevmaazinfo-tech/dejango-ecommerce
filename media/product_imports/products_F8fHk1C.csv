@@ -1,0 +1,4 @@
+sku,name,description,price,stock_count,category,image_url
+LAP-001,Dell Inspiron 15,Dell laptop,899.99,10,Laptops,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk95cF9XZ4gYE4cCuIwEWpYnDKOAgR1MLMeGM_SoPGyw&s=10
+LAP-002,HP Pavilion 15,HP laptop,799.99,15,Laptops,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXykyw8h4Ocu2ohnV375KuhE-ZAc6JiyS2XPn2EAr33QGlSYPej1spAb3C&s=10
+HEAD-001,Sony WH-1000XM5,Wireless headphones,349.99,8,Headphones,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUp_EqTIxUzc7f06j9l0bDm_nx3Znbg6DR6iv5YM2LVKRERZZKmIxNneBR&s=10

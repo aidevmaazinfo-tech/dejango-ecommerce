@@ -1,0 +1,24 @@
+<div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+    <figure class="aspect-square bg-base-200 relative overflow-hidden">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
+        {% else %}
+            <div class="w-full h-full flex items-center justify-center text-base-content/40 text-xs font-bold">No Image</div>
+        {% endif %}
+    </figure>
+
+    <div class="card-body p-5 flex flex-col flex-grow">
+        <span class="text-[11px] font-bold text-primary uppercase tracking-wider">{{ product.category.name }}</span>
+        <h2 class="card-title text-base font-bold text-base-content line-clamp-1">{{ product.name }}</h2>
+        <div class="text-sm font-extrabold text-primary mb-1">
+            ${{ product.price }}
+        </div>
+        <p class="text-xs text-base-content/70 line-clamp-2 leading-relaxed flex-grow">{{ product.description }}</p>
+        
+        <div class="card-actions justify-end mt-4">
+            <a href="{{ product.get_absolute_url }}" class="btn btn-primary btn-sm btn-block">
+                View Details
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,901 @@
+sku,name,description,price,stock_count,category,image_url
+SKU-1001,HP Laptop Pro Model 1,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by HP, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",784.99,38,Laptops,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80&v=1002
+SKU-1002,Dell Laptop Pro Model 2,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by Dell, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",819.99,31,Laptops,https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80&v=1003
+SKU-1003,Lenovo Laptop Pro Model 3,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by Lenovo, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",854.99,65,Laptops,https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80&v=1004
+SKU-1004,ASUS Laptop Pro Model 4,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by ASUS, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",889.99,30,Laptops,https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80&v=1005
+SKU-1005,Acer Laptop Pro Model 5,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by Acer, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",924.99,40,Laptops,https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80&v=1006
+SKU-1006,HP Laptop Pro Model 6,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by HP, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",959.99,92,Laptops,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80&v=1007
+SKU-1007,Dell Laptop Pro Model 7,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by Dell, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",994.99,48,Laptops,https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80&v=1008
+SKU-1008,Lenovo Laptop Pro Model 8,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by Lenovo, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",1029.99,54,Laptops,https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80&v=1009
+SKU-1009,ASUS Laptop Pro Model 9,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by ASUS, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",1064.99,40,Laptops,https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80&v=1010
+SKU-1010,Acer Laptop Pro Model 10,"Processor: Intel Core i5-13420H / AMD Ryzen 5
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 3-cell lithium-ion
+Connectivity: Wi-Fi 6, Bluetooth 5.3, USB-C, USB-A, HDMI
+Crafted by Acer, this elite laptop offers uncompromising performance for gaming, content creation, and enterprise multitasking.",1099.99,40,Laptops,https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80&v=1011
+SKU-1011,Samsung Smartphone Pro Model 1,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Samsung, delivering stunning photography and supreme daily performance.",624.99,28,Smartphones,https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80&v=1012
+SKU-1012,Apple Smartphone Pro Model 2,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Apple, delivering stunning photography and supreme daily performance.",649.99,89,Smartphones,https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80&v=1013
+SKU-1013,Xiaomi Smartphone Pro Model 3,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Xiaomi, delivering stunning photography and supreme daily performance.",674.99,22,Smartphones,https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80&v=1014
+SKU-1014,OnePlus Smartphone Pro Model 4,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by OnePlus, delivering stunning photography and supreme daily performance.",699.99,86,Smartphones,https://images.unsplash.com/photo-1533228876829-65c94e7b5025?auto=format&fit=crop&w=800&q=80&v=1015
+SKU-1015,Google Smartphone Pro Model 5,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Google, delivering stunning photography and supreme daily performance.",724.99,71,Smartphones,https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=800&q=80&v=1016
+SKU-1016,Samsung Smartphone Pro Model 6,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Samsung, delivering stunning photography and supreme daily performance.",749.99,72,Smartphones,https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80&v=1017
+SKU-1017,Apple Smartphone Pro Model 7,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Apple, delivering stunning photography and supreme daily performance.",774.99,64,Smartphones,https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80&v=1018
+SKU-1018,Xiaomi Smartphone Pro Model 8,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Xiaomi, delivering stunning photography and supreme daily performance.",799.99,36,Smartphones,https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80&v=1019
+SKU-1019,OnePlus Smartphone Pro Model 9,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by OnePlus, delivering stunning photography and supreme daily performance.",824.99,82,Smartphones,https://images.unsplash.com/photo-1533228876829-65c94e7b5025?auto=format&fit=crop&w=800&q=80&v=1020
+SKU-1020,Google Smartphone Pro Model 10,"Processor: Octa-core Advanced Mobile Processor
+RAM: 8GB / 12GB LPDDR5
+Storage: 256GB UFS 4.0
+Display: 6.7-inch AMOLED 120Hz Fluid Display
+Camera: 50MP Main Triple Camera System with OIS
+Operating System: Android / iOS Latest Edition
+Battery: 5000mAh with 45W Fast Charging
+Connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C
+Designed by Google, delivering stunning photography and supreme daily performance.",849.99,37,Smartphones,https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=800&q=80&v=1021
+SKU-1021,Apple Tablet Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Apple
+Engineered by Apple to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,22,Tablets,https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80&v=1022
+SKU-1022,Samsung Tablet Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Samsung
+Engineered by Samsung to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,81,Tablets,https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=800&q=80&v=1023
+SKU-1023,Lenovo Tablet Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Lenovo
+Engineered by Lenovo to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,51,Tablets,https://images.unsplash.com/photo-1588702547919-26b89e09ae29?auto=format&fit=crop&w=800&q=80&v=1024
+SKU-1024,Xiaomi Tablet Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Xiaomi
+Engineered by Xiaomi to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,40,Tablets,https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80&v=1025
+SKU-1025,Apple Tablet Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Apple
+Engineered by Apple to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,84,Tablets,https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80&v=1026
+SKU-1026,Samsung Tablet Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Samsung
+Engineered by Samsung to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,72,Tablets,https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=800&q=80&v=1027
+SKU-1027,Lenovo Tablet Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Lenovo
+Engineered by Lenovo to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,51,Tablets,https://images.unsplash.com/photo-1588702547919-26b89e09ae29?auto=format&fit=crop&w=800&q=80&v=1028
+SKU-1028,Xiaomi Tablet Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Xiaomi
+Engineered by Xiaomi to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,67,Tablets,https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80&v=1029
+SKU-1029,Apple Tablet Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Apple
+Engineered by Apple to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,44,Tablets,https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80&v=1030
+SKU-1030,Samsung Tablet Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Samsung
+Engineered by Samsung to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,80,Tablets,https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=800&q=80&v=1031
+SKU-1031,Dell Monitor Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Dell
+Engineered by Dell to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,76,Monitors,https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80&v=1032
+SKU-1032,LG Monitor Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by LG
+Engineered by LG to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,99,Monitors,https://images.unsplash.com/photo-1586210546990-50d40788646b?auto=format&fit=crop&w=800&q=80&v=1033
+SKU-1033,Samsung Monitor Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Samsung
+Engineered by Samsung to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,32,Monitors,https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=800&q=80&v=1034
+SKU-1034,ASUS Monitor Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by ASUS
+Engineered by ASUS to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,36,Monitors,https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80&v=1035
+SKU-1035,Acer Monitor Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Acer
+Engineered by Acer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,75,Monitors,https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80&v=1036
+SKU-1036,Dell Monitor Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Dell
+Engineered by Dell to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,52,Monitors,https://images.unsplash.com/photo-1586210546990-50d40788646b?auto=format&fit=crop&w=800&q=80&v=1037
+SKU-1037,LG Monitor Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by LG
+Engineered by LG to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,22,Monitors,https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=800&q=80&v=1038
+SKU-1038,Samsung Monitor Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Samsung
+Engineered by Samsung to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,90,Monitors,https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80&v=1039
+SKU-1039,ASUS Monitor Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by ASUS
+Engineered by ASUS to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,55,Monitors,https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80&v=1040
+SKU-1040,Acer Monitor Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Acer
+Engineered by Acer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,59,Monitors,https://images.unsplash.com/photo-1586210546990-50d40788646b?auto=format&fit=crop&w=800&q=80&v=1041
+SKU-1041,Logitech Keyboard Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Logitech
+Engineered by Logitech to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,23,Keyboards,https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80&v=1042
+SKU-1042,Razer Keyboard Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Razer
+Engineered by Razer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,92,Keyboards,https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80&v=1043
+SKU-1043,Corsair Keyboard Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Corsair
+Engineered by Corsair to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,71,Keyboards,https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80&v=1044
+SKU-1044,Keychron Keyboard Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Keychron
+Engineered by Keychron to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,50,Keyboards,https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80&v=1045
+SKU-1045,Logitech Keyboard Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Logitech
+Engineered by Logitech to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,37,Keyboards,https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80&v=1046
+SKU-1046,Razer Keyboard Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Razer
+Engineered by Razer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,53,Keyboards,https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80&v=1047
+SKU-1047,Corsair Keyboard Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Corsair
+Engineered by Corsair to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,47,Keyboards,https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80&v=1048
+SKU-1048,Keychron Keyboard Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Keychron
+Engineered by Keychron to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,89,Keyboards,https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80&v=1049
+SKU-1049,Logitech Keyboard Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Logitech
+Engineered by Logitech to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,67,Keyboards,https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80&v=1050
+SKU-1050,Razer Keyboard Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Razer
+Engineered by Razer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,66,Keyboards,https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80&v=1051
+SKU-1051,Logitech Mice Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Logitech
+Engineered by Logitech to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,92,Mice,https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80&v=1052
+SKU-1052,Razer Mice Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Razer
+Engineered by Razer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,37,Mice,https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80&v=1053
+SKU-1053,Corsair Mice Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Corsair
+Engineered by Corsair to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,53,Mice,https://images.unsplash.com/photo-1593111774642-a13b91b92019?auto=format&fit=crop&w=800&q=80&v=1054
+SKU-1054,SteelSeries Mice Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by SteelSeries
+Engineered by SteelSeries to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,45,Mice,https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80&v=1055
+SKU-1055,Logitech Mice Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Logitech
+Engineered by Logitech to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,94,Mice,https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80&v=1056
+SKU-1056,Razer Mice Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Razer
+Engineered by Razer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,38,Mice,https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80&v=1057
+SKU-1057,Corsair Mice Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Corsair
+Engineered by Corsair to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,57,Mice,https://images.unsplash.com/photo-1593111774642-a13b91b92019?auto=format&fit=crop&w=800&q=80&v=1058
+SKU-1058,SteelSeries Mice Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by SteelSeries
+Engineered by SteelSeries to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,22,Mice,https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80&v=1059
+SKU-1059,Logitech Mice Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Logitech
+Engineered by Logitech to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,59,Mice,https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80&v=1060
+SKU-1060,Razer Mice Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Razer
+Engineered by Razer to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,40,Mice,https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80&v=1061
+SKU-1061,Sony Headphone Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Sony
+Engineered by Sony to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,68,Headphones,https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80&v=1062
+SKU-1062,JBL Headphone Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by JBL
+Engineered by JBL to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,45,Headphones,https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80&v=1063
+SKU-1063,Bose Headphone Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Bose
+Engineered by Bose to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,35,Headphones,https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80&v=1064
+SKU-1064,Sennheiser Headphone Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Sennheiser
+Engineered by Sennheiser to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,27,Headphones,https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80&v=1065
+SKU-1065,Anker Headphone Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Anker
+Engineered by Anker to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,81,Headphones,https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80&v=1066
+SKU-1066,Sony Headphone Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Sony
+Engineered by Sony to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,99,Headphones,https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80&v=1067
+SKU-1067,JBL Headphone Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by JBL
+Engineered by JBL to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,24,Headphones,https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80&v=1068
+SKU-1068,Bose Headphone Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Bose
+Engineered by Bose to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,87,Headphones,https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80&v=1069
+SKU-1069,Sennheiser Headphone Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Sennheiser
+Engineered by Sennheiser to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,36,Headphones,https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80&v=1070
+SKU-1070,Anker Headphone Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Anker
+Engineered by Anker to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,91,Headphones,https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80&v=1071
+SKU-1071,PlayStation Gaming Console Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by PlayStation
+Engineered by PlayStation to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,42,Gaming Consoles,https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=800&q=80&v=1072
+SKU-1072,Xbox Gaming Console Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Xbox
+Engineered by Xbox to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,87,Gaming Consoles,https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=800&q=80&v=1073
+SKU-1073,Nintendo Gaming Console Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Nintendo
+Engineered by Nintendo to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,24,Gaming Consoles,https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80&v=1074
+SKU-1074,PlayStation Gaming Console Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by PlayStation
+Engineered by PlayStation to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,69,Gaming Consoles,https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=800&q=80&v=1075
+SKU-1075,Xbox Gaming Console Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Xbox
+Engineered by Xbox to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,43,Gaming Consoles,https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=800&q=80&v=1076
+SKU-1076,Nintendo Gaming Console Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Nintendo
+Engineered by Nintendo to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,67,Gaming Consoles,https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=800&q=80&v=1077
+SKU-1077,PlayStation Gaming Console Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by PlayStation
+Engineered by PlayStation to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,88,Gaming Consoles,https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80&v=1078
+SKU-1078,Xbox Gaming Console Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Xbox
+Engineered by Xbox to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,35,Gaming Consoles,https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=800&q=80&v=1079
+SKU-1079,Nintendo Gaming Console Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Nintendo
+Engineered by Nintendo to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,49,Gaming Consoles,https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=800&q=80&v=1080
+SKU-1080,PlayStation Gaming Console Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by PlayStation
+Engineered by PlayStation to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,75,Gaming Consoles,https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=800&q=80&v=1081
+SKU-1081,NVIDIA PC Component Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by NVIDIA
+Engineered by NVIDIA to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,54,PC Components,https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80&v=1082
+SKU-1082,AMD PC Component Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by AMD
+Engineered by AMD to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,77,PC Components,https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80&v=1083
+SKU-1083,Intel PC Component Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Intel
+Engineered by Intel to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,80,PC Components,https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80&v=1084
+SKU-1084,Corsair PC Component Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Corsair
+Engineered by Corsair to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,46,PC Components,https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=800&q=80&v=1085
+SKU-1085,Kingston PC Component Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Kingston
+Engineered by Kingston to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,46,PC Components,https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80&v=1086
+SKU-1086,NVIDIA PC Component Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by NVIDIA
+Engineered by NVIDIA to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,95,PC Components,https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80&v=1087
+SKU-1087,AMD PC Component Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by AMD
+Engineered by AMD to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,58,PC Components,https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80&v=1088
+SKU-1088,Intel PC Component Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Intel
+Engineered by Intel to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,62,PC Components,https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=800&q=80&v=1089
+SKU-1089,Corsair PC Component Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Corsair
+Engineered by Corsair to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,55,PC Components,https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80&v=1090
+SKU-1090,Kingston PC Component Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Kingston
+Engineered by Kingston to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,39,PC Components,https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80&v=1091
+SKU-1091,TP-Link Networking Pro Model 1,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by TP-Link
+Engineered by TP-Link to provide maximum reliability, ergonomic comfort, and professional-grade durability.",95.49,46,Networking,https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80&v=1092
+SKU-1092,ASUS Networking Pro Model 2,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by ASUS
+Engineered by ASUS to provide maximum reliability, ergonomic comfort, and professional-grade durability.",110.99,89,Networking,https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80&v=1093
+SKU-1093,Netgear Networking Pro Model 3,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Netgear
+Engineered by Netgear to provide maximum reliability, ergonomic comfort, and professional-grade durability.",126.49,93,Networking,https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=800&q=80&v=1094
+SKU-1094,D-Link Networking Pro Model 4,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by D-Link
+Engineered by D-Link to provide maximum reliability, ergonomic comfort, and professional-grade durability.",141.99,47,Networking,https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80&v=1095
+SKU-1095,Ubiquiti Networking Pro Model 5,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Ubiquiti
+Engineered by Ubiquiti to provide maximum reliability, ergonomic comfort, and professional-grade durability.",157.49,22,Networking,https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80&v=1096
+SKU-1096,TP-Link Networking Pro Model 6,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by TP-Link
+Engineered by TP-Link to provide maximum reliability, ergonomic comfort, and professional-grade durability.",172.99,77,Networking,https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80&v=1097
+SKU-1097,ASUS Networking Pro Model 7,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by ASUS
+Engineered by ASUS to provide maximum reliability, ergonomic comfort, and professional-grade durability.",188.49,53,Networking,https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=800&q=80&v=1098
+SKU-1098,Netgear Networking Pro Model 8,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Netgear
+Engineered by Netgear to provide maximum reliability, ergonomic comfort, and professional-grade durability.",203.99,27,Networking,https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80&v=1099
+SKU-1099,D-Link Networking Pro Model 9,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by D-Link
+Engineered by D-Link to provide maximum reliability, ergonomic comfort, and professional-grade durability.",219.49,98,Networking,https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80&v=1100
+SKU-1100,Ubiquiti Networking Pro Model 10,"Processor: High-Performance Integrated Controller
+RAM / Buffer: 32MB High-Speed Cache
+Storage / Capacity: Pro-Grade High Capacity Module
+Display / Interface: Optimized LED Indicator & Ergonomic Layout
+Compatibility: Universal Multi-Platform Plug & Play Support
+Operating System: OS Independent / Dedicated Drivers
+Power: Energy Efficient Low-Draw Circuitry
+Connectivity: High-Speed Wired & Wireless Interface by Ubiquiti
+Engineered by Ubiquiti to provide maximum reliability, ergonomic comfort, and professional-grade durability.",234.99,89,Networking,https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80&v=1101

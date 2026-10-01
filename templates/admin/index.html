@@ -1,0 +1,292 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block title %}Dashboard | Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}" style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px;">Admin Panel</a>
+</h1>
+{% endblock %}
+
+{% block content %}
+<div style="padding: 35px; background: #fafafa; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+
+    <!-- HEADER -->
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h2 style="margin: 0 0 5px 0; font-size: 26px; font-weight: 700; color: #111827;">
+                Dashboard
+            </h2>
+            <p style="margin: 0; font-size: 14px; color: #6b7280;">
+                Welcome back, manage your store from here
+            </p>
+        </div>
+        <!-- Live Indicator -->
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6b7280;">
+            <span id="live-dot" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+            <span id="live-text">Live</span>
+        </div>
+    </div>
+
+    <!-- SEARCH CARD -->
+    <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 30px; margin-bottom: 25px; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: #111827; display: flex; align-items: center; justify-content: center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <div>
+                <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #111827;">Global Search</h3>
+                <p style="margin: 0; font-size: 13px; color: #6b7280;">Find anything across your store</p>
+            </div>
+        </div>
+
+        <form method="get" action="/admin/global-search/" style="display: flex; gap: 10px;">
+            <input type="text" name="q" placeholder="Search users, orders, products..." style="flex: 1; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; color: #111827; background: #fafafa;" autofocus />
+            <button type="submit" style="padding: 12px 24px; background: #111827; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer;">Search</button>
+        </form>
+
+        <div style="margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="font-size: 12px; color: #9ca3af; margin-right: 5px; align-self: center;">Popular:</span>
+            <a href="/admin/global-search/?q=pending" style="font-size: 12px; color: #374151; text-decoration: none; padding: 5px 12px; border: 1px solid #e5e7eb; border-radius: 20px; background: #f9fafb;">Pending Orders</a>
+            <a href="/admin/global-search/?q=delivered" style="font-size: 12px; color: #374151; text-decoration: none; padding: 5px 12px; border: 1px solid #e5e7eb; border-radius: 20px; background: #f9fafb;">Delivered</a>
+            <a href="/admin/global-search/?q=active+users" style="font-size: 12px; color: #374151; text-decoration: none; padding: 5px 12px; border: 1px solid #e5e7eb; border-radius: 20px; background: #f9fafb;">Active Users</a>
+            <a href="/admin/global-search/?q=Lahore" style="font-size: 12px; color: #374151; text-decoration: none; padding: 5px 12px; border: 1px solid #e5e7eb; border-radius: 20px; background: #f9fafb;">Lahore</a>
+        </div>
+    </div>
+
+    <!-- MAIN STATS ROW -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 25px;">
+
+        <!-- Total Users -->
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 24px; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                <span style="font-size: 13px; font-weight: 500; color: #6b7280;">Total Users</span>
+                <div style="width: 38px; height: 38px; border-radius: 8px; background: #f0fdf4; display: flex; align-items: center; justify-content: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+            </div>
+            <p style="margin: 0; font-size: 32px; font-weight: 700; color: #111827;" id="stat-users">{{ total_users }}</p>
+            <p style="margin: 5px 0 0 0; font-size: 12px; color: #9ca3af;">Registered accounts</p>
+        </div>
+
+        <!-- Total Orders -->
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 24px; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                <span style="font-size: 13px; font-weight: 500; color: #6b7280;">Total Orders</span>
+                <div style="width: 38px; height: 38px; border-radius: 8px; background: #eff6ff; display: flex; align-items: center; justify-content: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+            </div>
+            <p style="margin: 0; font-size: 32px; font-weight: 700; color: #111827;" id="stat-orders">{{ total_orders }}</p>
+            <p style="margin: 5px 0 0 0; font-size: 12px; color: #9ca3af;">All time orders</p>
+        </div>
+
+        <!-- Total Products -->
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 24px; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                <span style="font-size: 13px; font-weight: 500; color: #6b7280;">Total Products</span>
+                <div style="width: 38px; height: 38px; border-radius: 8px; background: #fdf4ff; display: flex; align-items: center; justify-content: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2">
+                        <path d="M12 2 2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+            </div>
+            <p style="margin: 0; font-size: 32px; font-weight: 700; color: #111827;" id="stat-products">{{ total_products }}</p>
+            <p style="margin: 5px 0 0 0; font-size: 12px; color: #9ca3af;">Active products</p>
+        </div>
+
+        <!-- Total Revenue -->
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 24px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border-left: 4px solid #10b981;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                <span style="font-size: 13px; font-weight: 500; color: #6b7280;">Total Revenue</span>
+                <div style="width: 38px; height: 38px; border-radius: 8px; background: #ecfdf5; display: flex; align-items: center; justify-content: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+            </div>
+            <p style="margin: 0; font-size: 28px; font-weight: 700; color: #059669;">${{ total_revenue }}</p>
+            <p style="margin: 5px 0 0 0; font-size: 12px; color: #9ca3af;">Completed payments</p>
+        </div>
+    </div>
+
+    <!-- ORDER STATUS STATS -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 25px;">
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; text-align: center;">
+            <p style="margin: 0 0 5px 0; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px;">Pending</p>
+            <p style="margin: 0; font-size: 22px; font-weight: 700; color: #d97706;">{{ pending_orders_count }}</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; text-align: center;">
+            <p style="margin: 0 0 5px 0; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px;">Shipped</p>
+            <p style="margin: 0; font-size: 22px; font-weight: 700; color: #2563eb;">{{ shipped_orders_count }}</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; text-align: center;">
+            <p style="margin: 0 0 5px 0; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px;">Delivered</p>
+            <p style="margin: 0; font-size: 22px; font-weight: 700; color: #16a34a;">{{ delivered_orders_count }}</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; text-align: center;">
+            <p style="margin: 0 0 5px 0; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px;">Cancelled</p>
+            <p style="margin: 0; font-size: 22px; font-weight: 700; color: #dc2626;">{{ cancelled_orders_count }}</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; text-align: center;">
+            <p style="margin: 0 0 5px 0; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px;">Low Stock</p>
+            <p style="margin: 0; font-size: 22px; font-weight: 700; color: #ef4444;">{{ low_stock_count }}</p>
+        </div>
+    </div>
+
+    <!-- PENDING ORDERS LIST -->
+    {% if pending_orders_list %}
+    <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 22px; margin-bottom: 25px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #d97706;">Pending Orders ({{ pending_orders_count }})</h3>
+            <a href="/admin/orders/order/?order_status__exact=PROCESSING" style="font-size: 12px; color: #2563eb; text-decoration: none;">View All →</a>
+        </div>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="border-bottom: 2px solid #e5e7eb;">
+                    <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">Order</th>
+                    <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">Customer</th>
+                    <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">City</th>
+                    <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in pending_orders_list %}
+                <tr style="border-bottom: 1px solid #f3f4f6;">
+                    <td style="padding: 10px 8px; font-size: 13px; font-weight: 600; color: #111827;">#{{ order.id }}</td>
+                    <td style="padding: 10px 8px; font-size: 13px; color: #374151;">{{ order.first_name }} {{ order.last_name }}</td>
+                    <td style="padding: 10px 8px; font-size: 13px; color: #6b7280;">{{ order.city }}</td>
+                    <td style="padding: 10px 8px; font-size: 13px; color: #6b7280;">{{ order.created_at|date:"Y-m-d H:i" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    <!-- RECENT ORDERS & LOW STOCK -->
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 25px;">
+
+        <!-- Recent Orders -->
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #111827;">Recent Orders</h3>
+                <a href="/admin/orders/order/" style="font-size: 12px; color: #2563eb; text-decoration: none;">View All →</a>
+            </div>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #e5e7eb;">
+                        <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">Order</th>
+                        <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">Customer</th>
+                        <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">Total</th>
+                        <th style="padding: 8px; text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in recent_orders %}
+                    <tr style="border-bottom: 1px solid #f3f4f6;">
+                        <td style="padding: 10px 8px; font-size: 13px; font-weight: 600; color: #111827;">#{{ order.id }}</td>
+                        <td style="padding: 10px 8px; font-size: 13px; color: #374151;">{{ order.first_name }} {{ order.last_name }}</td>
+                        <td style="padding: 10px 8px; font-size: 13px; color: #111827; font-weight: 500;">${{ order.total_price }}</td>
+                        <td style="padding: 10px 8px;">
+                            <span style="padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; {% if order.order_status == 'DELIVERED' %}background: #f0fdf4; color: #16a34a;{% elif order.order_status == 'CANCELLED' %}background: #fef2f2; color: #dc2626;{% elif order.order_status == 'SHIPPED' %}background: #eff6ff; color: #2563eb;{% else %}background: #fffbeb; color: #d97706;{% endif %};">{{ order.order_status }}</span>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="4" style="padding: 25px; text-align: center; color: #6b7280;">No orders yet</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Low Stock Alerts -->
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #dc2626;">Low Stock Alerts</h3>
+                <a href="/admin/products/product/" style="font-size: 12px; color: #2563eb; text-decoration: none;">View All →</a>
+            </div>
+            {% for product in low_stock_list %}
+            <div style="padding: 10px 0; border-bottom: 1px solid #f3f4f6;">
+                <p style="margin: 0; font-size: 13px; font-weight: 500; color: #111827;">{{ product.name }}</p>
+                <p style="margin: 3px 0 0 0; font-size: 12px; color: #6b7280;">
+                    SKU: {{ product.sku|default:"—" }} |
+                    <span style="color: #dc2626; font-weight: 600;">{{ product.stock_count }} left</span>
+                </p>
+            </div>
+            {% empty %}
+            <p style="text-align: center; color: #6b7280; padding: 25px;">All products well stocked</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- APP MODELS GRID -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px;">
+        {% for app in app_list %}
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">
+            <div style="padding: 18px 22px; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-weight: 600; font-size: 14px; color: #111827;">{{ app.name }}</span>
+                <span style="font-size: 11px; padding: 3px 8px; border-radius: 12px; background: #f3f4f6; color: #6b7280;">{{ app.models|length }} items</span>
+            </div>
+            <div>
+                {% for model in app.models %}
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 22px; border-bottom: 1px solid #f9fafb;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 6px; height: 6px; border-radius: 50%; background: #d1d5db;"></div>
+                        {% if model.admin_url %}
+                        <a href="{{ model.admin_url }}" style="color: #111827; text-decoration: none; font-size: 14px; font-weight: 500;">{{ model.name }}</a>
+                        {% else %}
+                        <span style="color: #6b7280; font-size: 14px;">{{ model.name }}</span>
+                        {% endif %}
+                    </div>
+                    <div style="display: flex; gap: 12px;">
+                        {% if model.add_url %}
+                        <a href="{{ model.add_url }}" style="color: #2563eb; text-decoration: none; font-size: 13px; font-weight: 500;">Add</a>
+                        {% endif %}
+                        {% if model.admin_url %}
+                        <a href="{{ model.admin_url }}" style="color: #6b7280; text-decoration: none; font-size: 13px;">Edit</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- LIVE STATS SCRIPT -->
+<script>
+    function updateStats() {
+        fetch('/chat/live-stats/')
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                var usersEl = document.getElementById('stat-users');
+                var ordersEl = document.getElementById('stat-orders');
+                var productsEl = document.getElementById('stat-products');
+                if (usersEl) usersEl.textContent = data.total_users;
+                if (ordersEl) ordersEl.textContent = data.total_orders;
+                if (productsEl) productsEl.textContent = data.total_products;
+            })
+            .catch(function(error) { console.error('Stats update failed:', error); });
+    }
+    setTimeout(updateStats, 5000);
+    setInterval(updateStats, 30000);
+</script>
+{% endblock %}

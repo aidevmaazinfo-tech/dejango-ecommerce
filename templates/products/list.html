@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Shop Catalog - DevStore{% endblock %}
+
+{% block content %}
+<div class="flex flex-col lg:flex-row gap-8">
+    <!-- Sidebar -->
+    <aside class="w-full lg:w-64 flex-shrink-0">
+        <div class="card bg-base-100 border border-base-300 p-4 sticky top-24 shadow-sm">
+            <h3 class="font-bold text-lg mb-3">Categories</h3>
+            <ul class="menu bg-base-100 rounded-box p-0">
+                <li>
+                    <a href="{% url 'products:product_list' %}" class="{% if not category %}active font-bold{% endif %}">
+                        All Items
+                    </a>
+                </li>
+                {% for cat in categories %}
+                    <li>
+                        <a href="{{ cat.get_absolute_url }}" class="{% if category and category.id == cat.id %}active font-bold{% endif %}">
+                            {{ cat.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="flex-grow">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold">
+                {% if category %}{{ category.name }}{% elif query %}Results for "{{ query }}"{% else %}Catalog{% endif %}
+            </h1>
+            <span class="badge badge-neutral font-bold">{{ products|length }} Items</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for product in products %}
+                {% include 'includes/components/_product_card.html' with product=product %}
+            {% empty %}
+                <div class="col-span-full py-16 text-center bg-base-100 rounded-2xl border border-dashed border-base-300">
+                    <p class="text-base-content/60">No items match your criteria.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

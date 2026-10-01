@@ -1,0 +1,1840 @@
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}DevStore - Modern E-Commerce{% endblock %}
+    </title>
+
+    {% tailwind_css %}
+
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-base-200 text-base-content antialiased">
+
+{% include 'includes/_navbar.html' %}
+
+
+{% if request.path != '/accounts/login/' and request.path != '/accounts/signup/' %}
+
+<!-- =========================================================
+     GLOBAL AI ASSISTANT COMMAND BAR
+========================================================== -->
+
+<section class="w-full bg-base-100 border-b border-base-300">
+    <div class="max-w-7xl mx-auto px-4 py-5">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Assistant Label -->
+            <div class="flex items-center justify-center gap-2 mb-3">
+
+                <div class="flex items-center justify-center w-7 h-7 rounded-lg bg-primary/10 text-primary">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-4 h-4"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19 16l.7 2.3L22 19l-.7-2.3L19 22l-.7-2.3L16 19l2.3-.7L19 16z"/>
+
+                    </svg>
+
+                </div>
+
+                <span class="text-sm font-bold tracking-tight text-base-content">
+                    Ask DevStore
+                </span>
+
+                <span class="badge badge-primary badge-outline badge-xs font-semibold">
+                    AI Assistant
+                </span>
+
+            </div>
+
+
+            <!-- Command Bar -->
+            <div class="relative flex items-center gap-2 p-1.5 rounded-2xl bg-base-200 border border-base-300 shadow-sm transition-all duration-200">
+
+                <!-- AI Icon -->
+                <div class="flex items-center justify-center shrink-0 w-11 h-11 rounded-xl bg-primary text-primary-content shadow-sm">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-5 h-5"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19 16l.7 2.3L22 19l-.7-2.3L19 22l-.7-2.3L16 19l2.3-.7L19 16z"/>
+
+                    </svg>
+
+                </div>
+
+
+                <!-- Input -->
+                <div class="relative flex-1 min-w-0">
+
+                    <input
+                        type="text"
+                        id="global-command-input"
+                        placeholder="Ask me to find products, manage your cart, or check an order..."
+                        autocomplete="off"
+                        class="w-full bg-transparent border-0 outline-none ring-0 focus:border-0 focus:outline-none focus:ring-0 px-2 py-3 text-sm text-base-content placeholder:text-base-content/40"
+                        style="outline:none !important; box-shadow:none !important; border:none !important;"
+                    />
+
+                </div>
+
+
+                <!-- Enter Hint -->
+                <div class="hidden md:flex items-center gap-1 text-[10px] text-base-content/40 mr-1 whitespace-nowrap">
+
+                    <kbd class="kbd kbd-xs bg-base-100 border-base-300">
+                        Enter
+                    </kbd>
+
+                </div>
+
+
+                <!-- Ask Button -->
+                <button
+                    type="button"
+                    id="global-command-button"
+                    class="btn btn-primary rounded-xl px-5 min-h-11 h-11 shadow-sm hover:shadow-md transition-all gap-2"
+                >
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-4 h-4"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19 16l.7 2.3L22 19l-.7-2.3L19 22l-.7-2.3L16 19l2.3-.7L19 16z"/>
+
+                    </svg>
+
+                    <span id="global-command-button-text">
+                        Ask
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- Quick Commands -->
+            <div class="mt-4">
+
+                <div class="flex flex-wrap items-center justify-center gap-2">
+
+                    <span class="text-[11px] text-base-content/40 mr-1">
+                        Try
+                    </span>
+
+
+                    <!-- Products -->
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('show laptops')"
+                    >
+                        Show laptops
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('show Acer EliteBook Ultra Model 5 details')"
+                    >
+                        Product details
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('Headphones under 500')"
+                    >
+                        Under $500
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('laptops between 500 and 1000')"
+                    >
+                        $500–$1000
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('laptops above 1000')"
+                    >
+                        Above $1000
+                    </button>
+
+
+                    <!-- Cart -->
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('show my cart')"
+                    >
+                        My cart
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('add smartwatch to cart')"
+                    >
+                        Add to cart
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('remove smartwatch from cart')"
+                    >
+                        Remove from cart
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('change smartwatch quantity to 2')"
+                    >
+                        Update quantity
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('clear my cart')"
+                    >
+                        Clear cart
+                    </button>
+
+
+                    <!-- Orders -->
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('show my orders')"
+                    >
+                        My orders
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('delivery status of order ')"
+                    >
+                        Delivery status
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('change my address to ')"
+                    >
+                        Change Address
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('reorder order ')"
+                    >
+                        Reorder order
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('show order ')"
+                    >
+                        Order details
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('cancel order ')"
+                    >
+                        Cancel order
+                    </button>
+
+
+                    <!-- Delivered Products -->
+
+                    <button
+                        type="button"
+                        class="assistant-command"
+                        onclick="setGlobalCommand('show my delivered products')"
+                    >
+                        Delivered products
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<style>
+.assistant-command {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 9999px;
+
+    background-color: hsl(var(--b2));
+    color: hsl(var(--bc));
+
+    /* Visible light-gray rounded border */
+    border: 1px solid #d1d5db;
+
+    transition: all 0.2s ease;
+}
+
+.assistant-command:hover {
+    border-color: hsl(var(--p));
+    color: hsl(var(--p));
+    background-color: hsl(var(--b1));
+}
+</style>
+
+{% endif %}
+
+
+<!-- =========================================================
+     FLASH MESSAGES
+========================================================== -->
+
+{% if messages %}
+
+<div class="toast toast-top toast-end z-50 mt-16">
+
+    {% for message in messages %}
+
+    <div class="alert alert-{% if message.tags == 'error' %}error{% else %}success{% endif %} text-xs font-semibold shadow-lg">
+
+        <span>
+            {{ message }}
+        </span>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endif %}
+
+
+<!-- =========================================================
+     PAGE CONTENT
+========================================================== -->
+
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8">
+
+    {% block content %}{% endblock %}
+
+</main>
+
+
+{% include 'includes/_footer.html' %}
+
+
+{% if request.path != '/accounts/login/' and request.path != '/accounts/signup/' %}
+
+<!-- =========================================================
+     GLOBAL ASSISTANT JAVASCRIPT
+========================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const input =
+        document.getElementById("global-command-input");
+
+    const button =
+        document.getElementById("global-command-button");
+
+    const buttonText =
+        document.getElementById("global-command-button-text");
+
+
+    if (!input || !button) {
+        return;
+    }
+
+
+    /* =====================================================
+       QUICK COMMAND HELPER
+    ===================================================== */
+
+    window.setGlobalCommand = function (command) {
+
+        input.value = command;
+
+        input.focus();
+
+    };
+
+
+    /* =====================================================
+       INPUT
+    ===================================================== */
+
+    input.style.outline = "none";
+    input.style.boxShadow = "none";
+    input.style.border = "none";
+
+
+    input.addEventListener("focus", function () {
+
+        this.style.outline = "none";
+        this.style.boxShadow = "none";
+        this.style.border = "none";
+
+    });
+
+
+    /* =====================================================
+       ENTER
+    ===================================================== */
+
+    input.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            runGlobalCommand();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       BUTTON
+    ===================================================== */
+
+    button.addEventListener(
+        "click",
+        runGlobalCommand
+    );
+
+
+    /* =====================================================
+       MAIN COMMAND
+    ===================================================== */
+
+    async function runGlobalCommand() {
+
+        const command =
+            input.value.trim();
+
+
+        if (!command) {
+
+            input.focus();
+
+            return;
+
+        }
+
+
+        setLoading(true);
+
+
+        if (isHomePage()) {
+
+            showHomeResults();
+
+            showHomeLoading();
+
+        }
+
+
+        try {
+
+            const response = await fetch(
+                "{% url 'assistant:command' %}",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": getCsrfToken(),
+                        "X-Requested-With": "XMLHttpRequest"
+                    },
+
+                    body: JSON.stringify({
+                        command: command
+                    })
+                }
+            );
+
+
+            let data;
+
+
+            try {
+
+                data = await response.json();
+
+            } catch (error) {
+
+                console.error(
+                    "Invalid assistant response:",
+                    error
+                );
+
+                showError(
+                    "The server returned an invalid response."
+                );
+
+                return;
+
+            }
+
+
+            console.log(
+                "Assistant command response:",
+                data
+            );
+
+
+            /* =================================================
+               API ERROR
+            ================================================= */
+
+            if (!response.ok || !data.success) {
+
+                showError(
+                    data.message ||
+                    data.data?.message ||
+                    "I couldn't complete that request."
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               NORMALIZE RESPONSE
+            ================================================= */
+
+            const action =
+                data.action ||
+                data.data?.action ||
+                "";
+
+
+            const navigation =
+                data.navigation ||
+                data.data?.navigation ||
+                "";
+
+
+            const redirectUrl =
+                data.redirect_url ||
+                data.data?.redirect_url ||
+                "";
+
+
+            const toolName =
+                data.tool_call?.name ||
+                data.data?.tool_call?.name ||
+                "";
+
+
+            const confirmationRequired =
+                data.confirmation_required === true ||
+                data.data?.confirmation_required === true;
+
+
+            console.log(
+                "Action:",
+                action
+            );
+
+            console.log(
+                "Navigation:",
+                navigation
+            );
+
+            console.log(
+                "Tool:",
+                toolName
+            );
+
+            console.log(
+                "Redirect:",
+                redirectUrl
+            );
+
+
+            /* =================================================
+               PRODUCT SEARCH
+               
+               Includes:
+               - normal product search
+               - delivered products
+            ================================================= */
+
+            const isProductSearch =
+                action === "product_search" ||
+                action === "search_products" ||
+                action === "search_delivered_products" ||
+                action === "delivered_products" ||
+                action === "delivered_product_search" ||
+                toolName === "search_products_tool" ||
+                toolName === "search_delivered_products_tool";
+
+
+            if (isProductSearch) {
+
+                if (!isHomePage()) {
+
+                    sessionStorage.setItem(
+                        "assistant_pending_response",
+                        JSON.stringify(data)
+                    );
+
+
+                    window.location.assign("/");
+
+                    return;
+
+                }
+
+
+                renderProductSearch(data);
+
+                return;
+
+            }
+
+
+            /* =================================================
+               PRODUCT DETAILS
+            ================================================= */
+
+            const isProductDetails =
+                action === "product_details" ||
+                action === "get_product_details" ||
+                toolName === "get_product_description_tool";
+
+
+            if (isProductDetails) {
+
+                if (!isHomePage()) {
+
+                    sessionStorage.setItem(
+                        "assistant_pending_response",
+                        JSON.stringify(data)
+                    );
+
+
+                    window.location.assign("/");
+
+                    return;
+
+                }
+
+
+                renderProductDetails(data);
+
+                return;
+
+            }
+
+
+            /* =================================================
+               CART
+            ================================================= */
+
+            if (
+                navigation === "cart" ||
+                navigation === "cart_detail" ||
+                action === "view_cart" ||
+                action === "add_to_cart" ||
+                action === "remove_from_cart" ||
+                action === "clear_cart" ||
+                action === "update_cart_quantity"
+            ) {
+
+                window.location.assign(
+                    redirectUrl || "/cart/"
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               ORDER LIST
+            ================================================= */
+
+            if (
+                navigation === "order_list" ||
+                action === "list"
+            ) {
+
+                window.location.assign(
+                    redirectUrl || "/orders/"
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               ORDER DETAIL / TRACKING
+            ================================================= */
+
+            if (
+                navigation === "order_detail" ||
+                action === "specific" ||
+                action === "track"
+            ) {
+
+                if (redirectUrl) {
+
+                    window.location.assign(
+                        redirectUrl
+                    );
+
+                    return;
+
+                }
+
+
+                const orderId =
+                    data.order_id ||
+                    data.data?.order_id ||
+                    data.order?.id ||
+                    data.data?.order?.id ||
+                    data.tool_call?.arguments?.order_id;
+
+
+                if (orderId) {
+
+                    window.location.assign(
+                        `/orders/${orderId}/`
+                    );
+
+                    return;
+
+                }
+
+
+                showError(
+                    "I couldn't identify that order."
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               ORDER CANCELLATION
+            ================================================= */
+
+            if (
+                action === "cancel" ||
+                confirmationRequired
+            ) {
+
+                if (redirectUrl) {
+
+                    window.location.assign(
+                        redirectUrl
+                    );
+
+                    return;
+
+                }
+
+
+                const orderId =
+                    data.order_id ||
+                    data.data?.order_id ||
+                    data.order?.id ||
+                    data.data?.order?.id ||
+                    data.tool_call?.arguments?.order_id ||
+                    data.tool_call?.arguments?.cancel_order_id;
+
+
+                if (orderId) {
+
+                    window.location.assign(
+                        `/orders/${orderId}/?cancel=1`
+                    );
+
+                    return;
+
+                }
+
+
+                showError(
+                    "I couldn't identify which order you want to cancel."
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               GENERIC
+            ================================================= */
+
+            showMessage(
+                data.message ||
+                data.data?.message ||
+                "Request completed."
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Global assistant error:",
+                error
+            );
+
+
+            showError(
+                "An error occurred while processing your request."
+            );
+
+
+        } finally {
+
+            setLoading(false);
+
+        }
+
+    }
+
+
+    /* =========================================================
+       PRODUCT SEARCH
+    ========================================================= */
+
+    function renderProductSearch(data) {
+
+        showHomeResults();
+
+
+        const toolName =
+            data.tool_call?.name ||
+            data.data?.tool_call?.name ||
+            "";
+
+
+        const action =
+            data.action ||
+            data.data?.action ||
+            "";
+
+
+        const isDeliveredSearch =
+            toolName === "search_delivered_products_tool" ||
+            action === "search_delivered_products" ||
+            action === "delivered_products" ||
+            action === "delivered_product_search";
+
+
+        if (isDeliveredSearch) {
+
+            setHomeResultsTitle(
+                "Your Delivered Products"
+            );
+
+            setHomeResultsSubtitle(
+                data.message ||
+                data.data?.message ||
+                "Products from your delivered orders"
+            );
+
+        } else {
+
+            setHomeResultsTitle(
+                "Product Search Results"
+            );
+
+            setHomeResultsSubtitle(
+                data.message ||
+                data.data?.message ||
+                "Products matching your search"
+            );
+
+        }
+
+
+        /*
+         * IMPORTANT
+         *
+         * Supports all these response structures:
+         *
+         * data.products
+         * data.data.products
+         * data.data.data.products
+         */
+
+        const products =
+            data.products ||
+            data.data?.products ||
+            data.data?.data?.products ||
+            data.result?.products ||
+            data.data?.result?.products ||
+            [];
+
+
+        console.log(
+            "Products extracted for rendering:",
+            products
+        );
+
+
+        if (
+            !Array.isArray(products) ||
+            products.length === 0
+        ) {
+
+            setHomeResults(`
+
+                <div class="col-span-full text-center py-10 text-base-content/60">
+
+                    <div class="flex justify-center mb-3">
+
+                        <div class="w-12 h-12 rounded-full bg-base-200 flex items-center justify-center">
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7"/>
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M4 13l2 6h12l2-6"/>
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <p class="text-sm">
+
+                        ${
+                            isDeliveredSearch
+                                ? "You don't have any delivered products yet."
+                                : "No products matched your search."
+                        }
+
+                    </p>
+
+                </div>
+
+            `);
+
+
+            scrollToHomeResults();
+
+            return;
+
+        }
+
+
+        let html = "";
+
+
+        products.forEach(function (product) {
+
+            html += createProductCard(product);
+
+        });
+
+
+        setHomeResults(html);
+
+
+        scrollToHomeResults();
+
+    }
+
+
+    /* =========================================================
+       PRODUCT DETAILS
+    ========================================================= */
+
+    function renderProductDetails(data) {
+
+        showHomeResults();
+
+
+        setHomeResultsTitle(
+            "Product Details"
+        );
+
+
+        setHomeResultsSubtitle(
+            "Requested product"
+        );
+
+
+        const product =
+            data.product ||
+            data.data?.product ||
+            data.data?.data?.product;
+
+
+        if (!product) {
+
+            showError(
+                "The requested product could not be displayed."
+            );
+
+            return;
+
+        }
+
+
+        const imageUrl =
+            product.image_url ||
+            product.image ||
+            "";
+
+
+        const productUrl =
+            product.url ||
+            product.product_url ||
+            (
+                product.id
+                    ? `/product/${product.id}/`
+                    : "#"
+            );
+
+
+        const category =
+            typeof product.category === "object"
+                ? (
+                    product.category?.name ||
+                    "General"
+                )
+                : (
+                    product.category ||
+                    "General"
+                );
+
+
+        const stockCount =
+            Number(
+                product.stock_count || 0
+            );
+
+
+        const stockStatus =
+            product.stock_status ||
+            (
+                stockCount > 0
+                    ? "In Stock"
+                    : "Out of Stock"
+            );
+
+
+        const imageMarkup =
+            imageUrl
+                ? `
+                    <img
+                        src="${escapeHtml(imageUrl)}"
+                        alt="${escapeHtml(product.name || "Product")}"
+                        class="w-full h-64 object-cover rounded-xl"
+                    />
+                `
+                : `
+                    <div class="w-full h-64 bg-base-200 rounded-xl flex items-center justify-center text-base-content/40 text-sm">
+                        No Image
+                    </div>
+                `;
+
+
+        setHomeResults(`
+
+            <div class="col-span-full grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                <div>
+
+                    ${imageMarkup}
+
+                </div>
+
+
+                <div class="flex flex-col justify-center">
+
+                    <span class="text-xs font-bold uppercase tracking-wider text-primary">
+
+                        ${escapeHtml(category)}
+
+                    </span>
+
+
+                    <h3 class="text-2xl sm:text-3xl font-black mt-2">
+
+                        ${escapeHtml(product.name || "Product")}
+
+                    </h3>
+
+
+                    ${
+                        product.brand
+                            ? `
+                                <p class="text-sm text-base-content/60 mt-1">
+                                    ${escapeHtml(product.brand)}
+                                </p>
+                            `
+                            : ""
+                    }
+
+
+                    <div class="flex items-center gap-3 mt-4">
+
+                        <span class="text-2xl font-black">
+
+                            $${escapeHtml(
+                                String(product.price ?? "0.00")
+                            )}
+
+                        </span>
+
+
+                        <span class="badge ${
+                            stockCount > 0
+                                ? "badge-success"
+                                : "badge-error"
+                        } font-bold">
+
+                            ${escapeHtml(stockStatus)}
+
+                        </span>
+
+                    </div>
+
+
+                    ${
+                        product.description
+                            ? `
+                                <p class="mt-5 text-sm leading-relaxed text-base-content/70">
+
+                                    ${escapeHtml(
+                                        product.description
+                                    )}
+
+                                </p>
+                            `
+                            : ""
+                    }
+
+
+                    <div class="mt-6">
+
+                        <a
+                            href="${escapeHtml(productUrl)}"
+                            class="btn btn-primary rounded-xl"
+                        >
+                            Open Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `);
+
+
+        scrollToHomeResults();
+
+    }
+
+
+    /* =========================================================
+       PRODUCT CARD
+    ========================================================= */
+
+    function createProductCard(product) {
+
+        const imageUrl =
+            product.image_url ||
+            product.image ||
+            "";
+
+
+        const productUrl =
+            product.url ||
+            product.product_url ||
+            (
+                product.id
+                    ? `/product/${product.id}/`
+                    : "#"
+            );
+
+
+        const productName =
+            product.name ||
+            "Product";
+
+
+        const category =
+            typeof product.category === "object"
+                ? (
+                    product.category?.name ||
+                    "General"
+                )
+                : (
+                    product.category ||
+                    "General"
+                );
+
+
+        const price =
+            product.price ??
+            "0.00";
+
+
+        const stockCount =
+            Number(
+                product.stock_count || 0
+            );
+
+
+        const imageMarkup =
+            imageUrl
+                ? `
+                    <img
+                        src="${escapeHtml(imageUrl)}"
+                        alt="${escapeHtml(productName)}"
+                        class="w-full h-48 object-cover rounded-xl mb-4"
+                        loading="lazy"
+                    />
+                `
+                : `
+                    <div class="w-full h-48 bg-base-200 rounded-xl mb-4 flex items-center justify-center text-base-content/40 text-xs">
+                        No Image
+                    </div>
+                `;
+
+
+        return `
+
+            <div
+                class="
+                    card
+                    bg-base-100
+                    border
+                    border-base-300
+                    hover:border-primary
+                    p-4
+                    rounded-2xl
+                    transition-all
+                    shadow-sm
+                    hover:shadow-md
+                    flex
+                    flex-col
+                    justify-between
+                "
+            >
+
+                <a
+                    href="${escapeHtml(productUrl)}"
+                    class="block"
+                >
+
+                    ${imageMarkup}
+
+
+                    <span class="text-xs font-semibold uppercase tracking-wider text-primary">
+
+                        ${escapeHtml(category)}
+
+                    </span>
+
+
+                    <h3 class="font-bold text-base text-base-content mt-1 line-clamp-2">
+
+                        ${escapeHtml(productName)}
+
+                    </h3>
+
+
+                    ${
+                        product.brand
+                            ? `
+                                <p class="text-xs text-base-content/50 mt-1">
+
+                                    ${escapeHtml(product.brand)}
+
+                                </p>
+                            `
+                            : ""
+                    }
+
+                </a>
+
+
+                <div class="flex items-center justify-between gap-3 mt-4 pt-3 border-t border-base-200">
+
+                    <span class="font-black text-lg text-base-content">
+
+                        $${escapeHtml(String(price))}
+
+                    </span>
+
+
+                    <a
+                        href="${escapeHtml(productUrl)}"
+                        class="btn btn-primary btn-sm rounded-lg px-4"
+                    >
+                        View Product
+                    </a>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =========================================================
+       HOME RESULT HELPERS
+    ========================================================= */
+
+    function showHomeResults() {
+
+        if (
+            typeof window.showHomeAssistantResults ===
+            "function"
+        ) {
+
+            window.showHomeAssistantResults();
+
+        }
+
+    }
+
+
+    function hideHomeResults() {
+
+        if (
+            typeof window.hideHomeAssistantResults ===
+            "function"
+        ) {
+
+            window.hideHomeAssistantResults();
+
+        }
+
+    }
+
+
+    function setHomeResultsTitle(title) {
+
+        if (
+            typeof window.setHomeAssistantResultsTitle ===
+            "function"
+        ) {
+
+            window.setHomeAssistantResultsTitle(title);
+
+        }
+
+    }
+
+
+    function setHomeResultsSubtitle(subtitle) {
+
+        if (
+            typeof window.setHomeAssistantResultsSubtitle ===
+            "function"
+        ) {
+
+            window.setHomeAssistantResultsSubtitle(subtitle);
+
+        }
+
+    }
+
+
+    function setHomeResults(html) {
+
+        if (
+            typeof window.setHomeAssistantResults ===
+            "function"
+        ) {
+
+            window.setHomeAssistantResults(html);
+
+        }
+
+    }
+
+
+    function scrollToHomeResults() {
+
+        if (
+            typeof window.scrollToHomeAssistantResults ===
+            "function"
+        ) {
+
+            window.scrollToHomeAssistantResults();
+
+        }
+
+    }
+
+
+    /* =========================================================
+       LOADING
+    ========================================================= */
+
+    function showHomeLoading() {
+
+        setHomeResultsTitle(
+            "Thinking..."
+        );
+
+
+        setHomeResultsSubtitle(
+            "Understanding your request..."
+        );
+
+
+        setHomeResults(`
+
+            <div class="col-span-full text-center py-10 text-base-content/60">
+
+                <span class="loading loading-spinner loading-md"></span>
+
+                <p class="text-sm mt-3">
+
+                    Understanding your request...
+
+                </p>
+
+            </div>
+
+        `);
+
+    }
+
+
+    /* =========================================================
+       ERROR
+    ========================================================= */
+
+    function showError(message) {
+
+        if (isHomePage()) {
+
+            showHomeResults();
+
+
+            setHomeResultsTitle(
+                "Something went wrong"
+            );
+
+
+            setHomeResultsSubtitle("");
+
+
+            setHomeResults(`
+
+                <div class="col-span-full text-center py-10 text-error">
+
+                    <p class="text-sm">
+
+                        ${escapeHtml(message)}
+
+                    </p>
+
+                </div>
+
+            `);
+
+
+            scrollToHomeResults();
+
+        } else {
+
+            console.error(message);
+
+        }
+
+    }
+
+
+    /* =========================================================
+       MESSAGE
+    ========================================================= */
+
+    function showMessage(message) {
+
+        if (isHomePage()) {
+
+            showHomeResults();
+
+
+            setHomeResultsTitle(
+                "Request Completed"
+            );
+
+
+            setHomeResultsSubtitle("");
+
+
+            setHomeResults(`
+
+                <div class="col-span-full text-center py-10">
+
+                    <p class="text-sm">
+
+                        ${escapeHtml(message)}
+
+                    </p>
+
+                </div>
+
+            `);
+
+
+            scrollToHomeResults();
+
+        }
+
+    }
+
+
+    /* =========================================================
+       LOADING STATE
+    ========================================================= */
+
+    function setLoading(loading) {
+
+        button.disabled = loading;
+
+
+        buttonText.textContent =
+            loading
+                ? "Thinking..."
+                : "Ask";
+
+    }
+
+
+    /* =========================================================
+       HOME PAGE
+    ========================================================= */
+
+    function isHomePage() {
+
+        const path =
+            window.location.pathname;
+
+
+        return (
+            path === "/" ||
+            path === ""
+        );
+
+    }
+
+
+    /* =========================================================
+       CSRF
+    ========================================================= */
+
+    function getCsrfToken() {
+
+        const name =
+            "csrftoken";
+
+
+        const cookies =
+            document.cookie.split(";");
+
+
+        for (
+            let i = 0;
+            i < cookies.length;
+            i++
+        ) {
+
+            const cookie =
+                cookies[i].trim();
+
+
+            if (
+                cookie.startsWith(
+                    name + "="
+                )
+            ) {
+
+                return decodeURIComponent(
+                    cookie.substring(
+                        name.length + 1
+                    )
+                );
+
+            }
+
+        }
+
+
+        const csrfInput =
+            document.querySelector(
+                "[name=csrfmiddlewaretoken]"
+            );
+
+
+        if (csrfInput) {
+
+            return csrfInput.value;
+
+        }
+
+
+        return "";
+
+    }
+
+
+    /* =========================================================
+       ESCAPE HTML
+    ========================================================= */
+
+    function escapeHtml(value) {
+
+        if (
+            value === null ||
+            value === undefined
+        ) {
+
+            return "";
+
+        }
+
+
+        return String(value)
+
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+
+            .replace(
+                /</g,
+                "&lt;"
+            )
+
+            .replace(
+                />/g,
+                "&gt;"
+            )
+
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+    }
+
+
+    /* =========================================================
+       CLEAR INPUT
+    ========================================================= */
+
+    window.globalAssistantClearInput =
+        function () {
+
+            input.value = "";
+
+            input.focus();
+
+        };
+
+
+    /* =========================================================
+       RESTORE PENDING RESPONSE
+    ========================================================= */
+
+    const pendingResponse =
+        sessionStorage.getItem(
+            "assistant_pending_response"
+        );
+
+
+    if (pendingResponse) {
+
+        sessionStorage.removeItem(
+            "assistant_pending_response"
+        );
+
+
+        try {
+
+            const parsed =
+                JSON.parse(
+                    pendingResponse
+                );
+
+
+            if (isHomePage()) {
+
+                const parsedAction =
+                    parsed.action ||
+                    parsed.data?.action ||
+                    "";
+
+
+                const parsedTool =
+                    parsed.tool_call?.name ||
+                    parsed.data?.tool_call?.name ||
+                    "";
+
+
+                const isPendingProductSearch =
+                    parsedAction === "product_search" ||
+                    parsedAction === "search_products" ||
+                    parsedAction === "search_delivered_products" ||
+                    parsedAction === "delivered_products" ||
+                    parsedAction === "delivered_product_search" ||
+                    parsedTool === "search_products_tool" ||
+                    parsedTool === "search_delivered_products_tool";
+
+
+                if (isPendingProductSearch) {
+
+                    renderProductSearch(parsed);
+
+                }
+
+
+                const isPendingProductDetails =
+                    parsedAction === "product_details" ||
+                    parsedAction === "get_product_details" ||
+                    parsedTool === "get_product_description_tool";
+
+
+                if (isPendingProductDetails) {
+
+                    renderProductDetails(parsed);
+
+                }
+
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "Could not restore assistant result:",
+                error
+            );
+
+        }
+
+    }
+
+});
+
+</script>
+
+{% endif %}
+
+</body>
+</html>

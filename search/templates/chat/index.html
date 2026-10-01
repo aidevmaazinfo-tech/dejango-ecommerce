@@ -1,0 +1,175 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevAI - Shopping Assistant</title>
+    <link rel="stylesheet" href="{% static 'chat/style1.css' %}">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <span class="logo-icon">🤖</span>
+            <span class="logo-text">DevAI</span>
+        </div>
+
+        <!-- NEW CHAT -->
+        <a href="{% url 'search:new_chat' %}" class="new-chat">
+            <span>＋</span>
+            <span>New Chat</span>
+        </a>
+
+        <!-- CLEAR HISTORY -->
+        <button type="button" id="clear-history" class="clear-chat">
+            <span>🗑</span>
+            <span>Clear History</span>
+        </button>
+
+        <!-- =================================================
+             CHAT HISTORY
+        ================================================== -->
+        <div class="history">
+            <h3>Recent Chats</h3>
+
+            {% for item in history %}
+                <div class="history-item">
+                    <div class="history-icon">💬</div>
+                    <div class="history-text">
+                        {{ item.query|truncatechars:45 }}
+                    </div>
+                </div>
+            {% empty %}
+                <div class="history-empty">
+                    <div class="history-empty-icon">💬</div>
+                    <p>No previous chats</p>
+                    <small>Your conversations will appear here.</small>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- SIDEBAR FOOTER -->
+        <div class="sidebar-footer">
+            <span>DevAI</span>
+            <span>v1.0</span>
+        </div>
+
+    </aside>
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+    <main class="main">
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-icon">🤖</div>
+                <div>
+                    <h1>DevAI Shopping Assistant</h1>
+                    <p>Find products and get help with your shopping</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span>Online</span>
+            </div>
+        </header>
+
+        <!-- =================================================
+             CHAT AREA
+        ================================================== -->
+        <section id="chat-box" class="chat-box">
+
+            <!-- =================================================
+                 WELCOME SCREEN
+            ================================================== -->
+            <div id="welcome" class="welcome">
+                <div class="welcome-icon">🤖</div>
+                <h2>Welcome to DevAI</h2>
+                <p>Ask me about products, prices, availability, categories, or help finding the right product for your needs.</p>
+
+                <!-- SUGGESTIONS -->
+                <div class="suggestions">
+                    <button type="button" class="suggestion-btn">
+                        <span class="suggestion-icon">💻</span>
+                        <span>Laptop</span>
+                    </button>
+
+                    <button type="button" class="suggestion-btn">
+                        <span class="suggestion-icon">🎧</span>
+                        <span>Headphones</span>
+                    </button>
+
+                    <button type="button" class="suggestion-btn">
+                        <span class="suggestion-icon">👕</span>
+                        <span>Wearables and Fitness</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- =================================================
+                 MESSAGES ARE INSERTED HERE BY app.js
+            ================================================== -->
+
+        </section>
+
+        <!-- =================================================
+             INPUT AREA
+        ================================================== -->
+        <div class="composer-wrapper">
+            <form id="chat-form" method="POST" autocomplete="off">
+                {% csrf_token %}
+                <div class="input-area">
+                    <input 
+                        id="message-input" 
+                        type="text" 
+                        name="message" 
+                        placeholder="Ask DevAI about products..." 
+                        autocomplete="off"
+                        maxlength="2000"
+                        required
+                    >
+                    <button type="submit" id="send-button" aria-label="Send message">
+                        <span>➤</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="input-help">
+                <span>DevAI can make mistakes. Verify important product information.</span>
+            </div>
+        </div>
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+        <footer>
+            DevAI Shopping Assistant
+            <span>•</span>
+            v1.0
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+<script src="{% static 'chat/app.js' %}"></script>
+
+</body>
+</html>

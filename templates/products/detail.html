@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }} - DevStore{% endblock %}
+
+{% block content %}
+<div class="card bg-base-100 border border-base-300 shadow-xl p-6 sm:p-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <!-- Gallery Section -->
+        <div class="space-y-4">
+            <!-- Main Featured Display Image -->
+            <div class="aspect-square bg-base-200 rounded-2xl overflow-hidden border border-base-300 relative">
+                {% if product.image %}
+                    <img id="main-product-image" 
+                         src="{{ product.image.url }}" 
+                         alt="{{ product.name }}" 
+                         class="w-full h-full object-cover transition-all duration-300">
+                {% else %}
+                    <div class="w-full h-full flex items-center justify-center text-base-content/40 font-bold">No Image</div>
+                {% endif %}
+            </div>
+
+            <!-- Thumbnails List -->
+            <div class="flex items-center gap-3 overflow-x-auto pb-2">
+                <!-- Main Cover Image Thumbnail -->
+                {% if product.image %}
+                    <button type="button" 
+                            onclick="switchImage('{{ product.image.url }}', this)" 
+                            class="thumb-btn w-20 h-20 rounded-xl overflow-hidden border-2 border-primary ring-2 ring-primary/20 flex-shrink-0 focus:outline-none transition-all">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-full object-cover">
+                    </button>
+                {% endif %}
+
+                <!-- Gallery Images from related_name='additional_images' -->
+                {% for item in product.additional_images.all %}
+                    <button type="button" 
+                            onclick="switchImage('{{ item.image.url }}', this)" 
+                            class="thumb-btn w-20 h-20 rounded-xl overflow-hidden border-2 border-base-300 hover:border-primary/50 flex-shrink-0 focus:outline-none transition-all">
+                        <img src="{{ item.image.url }}" alt="{{ product.name }}" class="w-full h-full object-cover">
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Detail Meta -->
+        <div class="flex flex-col">
+            <span class="text-xs font-bold uppercase tracking-wider text-primary">{{ product.category.name }}</span>
+            <h1 class="text-3xl font-extrabold mt-2">{{ product.name }}</h1>
+            
+            <div class="mt-4 flex items-center gap-4">
+                <span class="text-3xl font-black">${{ product.price }}</span>
+                {% if product.stock_count > 0 %}
+                    <span class="badge badge-success font-bold">In Stock</span>
+                {% else %}
+                    <span class="badge badge-error font-bold">Out of Stock</span>
+                {% endif %}
+            </div>
+
+            <p class="mt-6 text-base-content/70 text-sm leading-relaxed border-y border-base-300 py-6">
+                {{ product.description }}
+            </p>
+
+            {% if product.stock_count > 0 %}
+                <form action="{% url 'cart:cart_add' product.id %}" method="post" class="mt-8 space-y-4">
+                    {% csrf_token %}
+                    <div class="flex items-center gap-4">
+                        <label for="quantity" class="text-sm font-bold">Quantity:</label>
+                        <select name="quantity" id="quantity" class="select select-bordered select-sm">
+                            {% for i in "12345"|make_list %}
+                                <option value="{{ forloop.counter }}">{{ forloop.counter }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block rounded-xl shadow-lg">
+                        Add to Shopping Bag
+                    </button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchImage(imageUrl, activeBtn) {
+        // Swap main image target
+        const mainImage = document.getElementById('main-product-image');
+        if (mainImage) {
+            mainImage.src = imageUrl;
+        }
+
+        // Reset thumbnail borders
+        document.querySelectorAll('.thumb-btn').forEach(btn => {
+            btn.classList.remove('border-primary', 'ring-2', 'ring-primary/20');
+            btn.classList.add('border-base-300');
+        });
+
+        // Highlight selected thumbnail
+        activeBtn.classList.remove('border-base-300');
+        activeBtn.classList.add('border-primary', 'ring-2', 'ring-primary/20');
+    }
+</script>
+{% endblock %}

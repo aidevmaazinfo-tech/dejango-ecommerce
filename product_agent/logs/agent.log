@@ -1,0 +1,41 @@
+2026-08-20 17:11:21,967 - INFO - ============================================================
+2026-08-20 17:11:21,967 - INFO - PRODUCT AGENT STARTED
+2026-08-20 17:11:21,996 - INFO - Checking CSV: product_imports/products_F8fHk1C.csv
+2026-08-20 17:11:21,997 - INFO - Row 2: SKU LAP-001
+2026-08-20 17:11:22,000 - INFO - SKU LAP-001 \u2192 EXISTS \u2192 SKIPPED
+2026-08-20 17:11:22,002 - INFO - Row 3: SKU LAP-002
+2026-08-20 17:11:22,003 - INFO - SKU LAP-002 \u2192 EXISTS \u2192 SKIPPED
+2026-08-20 17:11:22,004 - INFO - Row 4: SKU HEAD-001
+2026-08-20 17:11:22,005 - INFO - SKU HEAD-001 \u2192 EXISTS \u2192 SKIPPED
+2026-08-20 17:11:22,005 - INFO - Checking CSV: product_imports/test.csv
+2026-08-20 17:11:22,006 - INFO - Row 2: SKU TEST-001
+2026-08-20 17:11:22,007 - INFO - SKU TEST-001 \u2192 EXISTS \u2192 SKIPPED
+2026-08-20 17:11:22,007 - INFO - New products imported: 0
+2026-08-20 17:11:22,007 - INFO - Existing products skipped: 4
+2026-08-20 17:11:22,007 - INFO - Errors: 0
+2026-08-20 17:11:22,007 - INFO - PRODUCT AGENT FINISHED
+2026-08-20 17:11:22,007 - INFO - ============================================================
+2026-08-24 15:00:06,052 - INFO - ============================================================
+2026-08-24 15:00:06,052 - INFO - PRODUCT AGENT STARTED
+2026-08-24 15:00:06,068 - INFO - Checking CSV: product_imports/products_F8fHk1C.csv
+2026-08-24 15:00:06,068 - INFO - Row 2: SKU LAP-001
+2026-08-24 15:00:06,085 - INFO - SKU LAP-001 \u2192 EXISTS \u2192 SKIPPED
+2026-08-24 15:00:06,085 - INFO - Row 3: SKU LAP-002
+2026-08-24 15:00:06,085 - INFO - SKU LAP-002 \u2192 EXISTS \u2192 SKIPPED
+2026-08-24 15:00:06,085 - INFO - Row 4: SKU HEAD-001
+2026-08-24 15:00:06,085 - INFO - SKU HEAD-001 \u2192 EXISTS \u2192 SKIPPED
+2026-08-24 15:00:06,085 - INFO - Checking CSV: product_imports/test.csv
+2026-08-24 15:00:06,085 - INFO - Row 2: SKU TEST-001
+2026-08-24 15:00:06,085 - INFO - SKU TEST-001 \u2192 NEW \u2192 IMPORTING
+2026-08-24 15:00:08,169 - INFO - SKU TEST-001 \u2192 IMPORTED
+2026-08-24 15:00:08,169 - INFO - Importer result: Created: 1
+Updated: 0
+Skipped: 0
+Images downloaded: 1
+Images processed: 1
+Images failed: 0
+2026-08-24 15:00:08,169 - INFO - New products imported: 1
+2026-08-24 15:00:08,169 - INFO - Existing products skipped: 3
+2026-08-24 15:00:08,169 - INFO - Errors: 0
+2026-08-24 15:00:08,169 - INFO - PRODUCT AGENT FINISHED
+2026-08-24 15:00:08,169 - INFO - ============================================================

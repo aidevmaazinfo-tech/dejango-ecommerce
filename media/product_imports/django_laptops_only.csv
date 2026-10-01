@@ -1,0 +1,181 @@
+sku,name,description,price,stock_count,category,image_url
+LAP-SKU-2001,HP EliteBook Ultra Model 1,"Processor: Intel Core i5-13420H
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by HP, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",844.99,46,Laptops,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80&v=2001
+LAP-SKU-2002,Dell EliteBook Ultra Model 2,"Processor: Intel Core i7-13700H
+RAM: 32GB DDR5
+Storage: 1TB NVMe SSD
+Display: 16-inch WQXGA IPS, 165Hz
+Graphics: NVIDIA GeForce RTX 4060 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Dell, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",889.99,45,Laptops,https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80&v=2002
+LAP-SKU-2003,Lenovo EliteBook Ultra Model 3,"Processor: AMD Ryzen 7 7840HS
+RAM: 8GB DDR5
+Storage: 2TB NVMe SSD
+Display: 14-inch OLED 90Hz
+Graphics: NVIDIA GeForce RTX 4070 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Lenovo, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",934.99,61,Laptops,https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80&v=2003
+LAP-SKU-2004,ASUS EliteBook Ultra Model 4,"Processor: AMD Ryzen 5 7640HS
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 17.3-inch Full HD 240Hz
+Graphics: Intel Iris Xe Graphics
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by ASUS, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",979.99,49,Laptops,https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80&v=2004
+LAP-SKU-2005,Acer EliteBook Ultra Model 5,"Processor: Intel Core i9-13900H
+RAM: 32GB DDR5
+Storage: 1TB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Acer, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1024.99,64,Laptops,https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80&v=2005
+LAP-SKU-2006,HP EliteBook Ultra Model 6,"Processor: Intel Core i5-13420H
+RAM: 8GB DDR5
+Storage: 2TB NVMe SSD
+Display: 16-inch WQXGA IPS, 165Hz
+Graphics: NVIDIA GeForce RTX 4060 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by HP, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1069.99,54,Laptops,https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80&v=2006
+LAP-SKU-2007,Dell EliteBook Ultra Model 7,"Processor: Intel Core i7-13700H
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 14-inch OLED 90Hz
+Graphics: NVIDIA GeForce RTX 4070 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Dell, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1114.99,61,Laptops,https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80&v=2007
+LAP-SKU-2008,Lenovo EliteBook Ultra Model 8,"Processor: AMD Ryzen 7 7840HS
+RAM: 32GB DDR5
+Storage: 1TB NVMe SSD
+Display: 17.3-inch Full HD 240Hz
+Graphics: Intel Iris Xe Graphics
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Lenovo, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1159.99,39,Laptops,https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80&v=2008
+LAP-SKU-2009,ASUS EliteBook Ultra Model 9,"Processor: AMD Ryzen 5 7640HS
+RAM: 8GB DDR5
+Storage: 2TB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by ASUS, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1204.99,27,Laptops,https://images.unsplash.com/photo-1504707748692-419802cf939d?auto=format&fit=crop&w=800&q=80&v=2009
+LAP-SKU-2010,Acer EliteBook Ultra Model 10,"Processor: Intel Core i9-13900H
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 16-inch WQXGA IPS, 165Hz
+Graphics: NVIDIA GeForce RTX 4060 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Acer, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1249.99,24,Laptops,https://images.unsplash.com/photo-1515940175183-6798529cb860?auto=format&fit=crop&w=800&q=80&v=2010
+LAP-SKU-2011,HP EliteBook Ultra Model 11,"Processor: Intel Core i5-13420H
+RAM: 32GB DDR5
+Storage: 1TB NVMe SSD
+Display: 14-inch OLED 90Hz
+Graphics: NVIDIA GeForce RTX 4070 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by HP, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1294.99,46,Laptops,https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80&v=2011
+LAP-SKU-2012,Dell EliteBook Ultra Model 12,"Processor: Intel Core i7-13700H
+RAM: 8GB DDR5
+Storage: 2TB NVMe SSD
+Display: 17.3-inch Full HD 240Hz
+Graphics: Intel Iris Xe Graphics
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Dell, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1339.99,72,Laptops,https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80&v=2012
+LAP-SKU-2013,Lenovo EliteBook Ultra Model 13,"Processor: AMD Ryzen 7 7840HS
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Lenovo, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1384.99,34,Laptops,https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80&v=2013
+LAP-SKU-2014,ASUS EliteBook Ultra Model 14,"Processor: AMD Ryzen 5 7640HS
+RAM: 32GB DDR5
+Storage: 1TB NVMe SSD
+Display: 16-inch WQXGA IPS, 165Hz
+Graphics: NVIDIA GeForce RTX 4060 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by ASUS, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1429.99,76,Laptops,https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80&v=2014
+LAP-SKU-2015,Acer EliteBook Ultra Model 15,"Processor: Intel Core i9-13900H
+RAM: 8GB DDR5
+Storage: 2TB NVMe SSD
+Display: 14-inch OLED 90Hz
+Graphics: NVIDIA GeForce RTX 4070 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Acer, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1474.99,38,Laptops,https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80&v=2015
+LAP-SKU-2016,HP EliteBook Ultra Model 16,"Processor: Intel Core i5-13420H
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 17.3-inch Full HD 240Hz
+Graphics: Intel Iris Xe Graphics
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by HP, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1519.99,70,Laptops,https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80&v=2016
+LAP-SKU-2017,Dell EliteBook Ultra Model 17,"Processor: Intel Core i7-13700H
+RAM: 32GB DDR5
+Storage: 1TB NVMe SSD
+Display: 15.6-inch Full HD IPS, 144Hz
+Graphics: NVIDIA GeForce RTX 4050 6GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Dell, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1564.99,27,Laptops,https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80&v=2017
+LAP-SKU-2018,Lenovo EliteBook Ultra Model 18,"Processor: AMD Ryzen 7 7840HS
+RAM: 8GB DDR5
+Storage: 2TB NVMe SSD
+Display: 16-inch WQXGA IPS, 165Hz
+Graphics: NVIDIA GeForce RTX 4060 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Lenovo, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1609.99,42,Laptops,https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80&v=2018
+LAP-SKU-2019,ASUS EliteBook Ultra Model 19,"Processor: AMD Ryzen 5 7640HS
+RAM: 16GB DDR5
+Storage: 512GB NVMe SSD
+Display: 14-inch OLED 90Hz
+Graphics: NVIDIA GeForce RTX 4070 8GB
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by ASUS, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1654.99,40,Laptops,https://images.unsplash.com/photo-1504707748692-419802cf939d?auto=format&fit=crop&w=800&q=80&v=2019
+LAP-SKU-2020,Acer EliteBook Ultra Model 20,"Processor: Intel Core i9-13900H
+RAM: 32GB DDR5
+Storage: 1TB NVMe SSD
+Display: 17.3-inch Full HD 240Hz
+Graphics: Intel Iris Xe Graphics
+Operating System: Windows 11 Home
+Battery: 4-cell lithium-ion (up to 10 hours battery life)
+Connectivity: Wi-Fi 6E, Bluetooth 5.3, Thunderbolt 4, USB-C, HDMI 2.1
+Engineered by Acer, this professional-grade laptop delivers supreme processing power, stunning visual fidelity, and robust build quality for power users and creators.",1699.99,44,Laptops,https://images.unsplash.com/photo-1515940175183-6798529cb860?auto=format&fit=crop&w=800&q=80&v=2020

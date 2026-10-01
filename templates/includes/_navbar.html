@@ -1,0 +1,104 @@
+{% load tailwind_tags %}
+
+<header class="sticky top-0 z-50 backdrop-blur-md bg-base-100/80 border-b border-base-300">
+    <div class="navbar max-w-7xl mx-auto px-4">
+
+
+    <!-- Logo -->
+    <div class="navbar-start">
+        <a href="{% url 'products:home' %}" class="btn btn-ghost text-xl font-bold tracking-tight text-primary">
+            <span class="p-2 bg-primary text-primary-content rounded-xl text-sm font-black">DS</span>
+            DevStore
+        </a>
+    </div>
+
+    <!-- Controls & Profile -->
+    <div class="navbar-end gap-2">
+        
+        <!-- Theme Controller Dropdown -->
+        <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle btn-sm">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-lg bg-base-100 rounded-box w-36 text-xs gap-1 border border-base-300">
+                <li><button type="button" onclick="setTheme('light')">Light</button></li>
+                <li><button type="button" onclick="setTheme('dark')">Dark</button></li>
+            </ul>
+        </div>
+
+        <!-- Cart Indicator -->
+        <a href="{% url 'cart:cart_detail' %}" class="btn btn-ghost btn-circle">
+            <div class="indicator">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                </svg>
+                {% if cart|length > 0 %}
+                    <span class="badge badge-sm badge-primary indicator-item">{{ cart|length }}</span>
+                {% endif %}
+            </div>
+        </a>
+
+        <!-- Account Menu -->
+        {% if user.is_authenticated %}
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar placeholder">
+                    <div class="bg-primary text-primary-content rounded-full w-8">
+                        <span class="text-xs font-bold">{{ user.username|slice:":2"|upper }}</span>
+                    </div>
+                </div>
+
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-xl bg-base-100 rounded-box w-52 border border-base-300">
+                    <li class="menu-title text-xs">
+                        Signed in as <b>{{ user.username }}</b>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'accounts:profile' %}">
+                            Profile Dashboard
+                        </a>
+                    </li>
+
+                    {% if user.is_staff %}
+                        <li>
+                            <a href="{% url 'admin:index' %}" target="_blank" class="text-warning">
+                                Django Admin
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    <div class="divider my-1"></div>
+
+                    <li>
+                        <form action="{% url 'accounts:logout' %}" method="post" class="w-full">
+                            {% csrf_token %}
+                            <button type="submit" class="text-error w-full text-left">
+                                Sign Out
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+        {% else %}
+            <a href="{% url 'accounts:login' %}" class="btn btn-ghost btn-sm">
+                Sign In
+            </a>
+
+            <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-sm rounded-full">
+                Sign Up
+            </a>
+        {% endif %}
+    </div>
+</div>
+
+
+</header>
+
+<script>
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.setAttribute('data-theme', themeName);
+    }
+</script>

@@ -1,0 +1,828 @@
+{% extends 'base.html' %}
+
+{% block title %}DevStore - Premium Tech & Apparel{% endblock %}
+
+{% block content %}
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="
+        relative
+        overflow-hidden
+        rounded-3xl
+        bg-gradient-to-br
+        from-primary/10
+        via-base-100
+        to-secondary/10
+        border
+        border-base-300
+        p-8
+        sm:p-12
+        mb-12
+        shadow-sm
+    "
+>
+
+    <div
+        class="
+            max-w-2xl
+            mx-auto
+            text-center
+            relative
+            z-10
+        "
+    >
+
+        <h1
+            class="
+                text-3xl
+                sm:text-5xl
+                font-black
+                tracking-tight
+                text-base-content
+                leading-tight
+            "
+        >
+            Built for Developers.
+            <br>
+
+            <span class="text-primary">
+                Styled for Everyday.
+            </span>
+        </h1>
+
+
+        <p
+            class="
+                py-4
+                text-sm
+                sm:text-base
+                text-base-content/70
+                max-w-lg
+                mx-auto
+                leading-relaxed
+            "
+        >
+            Upgrade your desk setup with high-performance peripherals,
+            ergonomic accessories, and minimalist developer apparel.
+        </p>
+
+
+        <div
+            class="
+                flex
+                flex-wrap
+                justify-center
+                gap-3
+                mt-6
+            "
+        >
+
+            <a
+                href="{% url 'products:product_list' %}"
+                class="
+                    btn
+                    btn-outline
+                    btn-sm
+                    rounded-xl
+                    px-6
+                "
+            >
+                Shop Catalog
+            </a>
+
+
+            <a
+                href="#categories"
+                class="
+                    btn
+                    btn-ghost
+                    btn-sm
+                    rounded-xl
+                    px-6
+                "
+            >
+                Explore Categories
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GLOBAL ASSISTANT PRODUCT RESULTS
+========================================================= -->
+
+<section
+    id="home-assistant-results-section"
+    class="hidden mb-12"
+>
+
+    <div
+        class="
+            flex
+            flex-col
+            sm:flex-row
+            justify-between
+            sm:items-center
+            gap-4
+            mb-6
+        "
+    >
+
+        <div>
+
+            <h2
+                id="home-assistant-results-title"
+                class="
+                    text-2xl
+                    font-bold
+                "
+            >
+                Search Results
+            </h2>
+
+
+            <p
+                id="home-assistant-results-subtitle"
+                class="
+                    text-xs
+                    text-base-content/60
+                    mt-1
+                "
+            >
+                Products matching your search
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="home-assistant-results-clear"
+            class="
+                btn
+                btn-ghost
+                btn-sm
+                rounded-xl
+                text-error
+                self-start
+                sm:self-auto
+            "
+        >
+            ✕ Clear
+        </button>
+
+    </div>
+
+
+    <div
+        id="home-assistant-results"
+        class="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+        "
+    ></div>
+
+</section>
+
+
+<!-- =========================================================
+     RECOMMENDATIONS
+========================================================= -->
+
+<section class="mb-12">
+
+    <div
+        class="
+            flex
+            justify-between
+            items-center
+            mb-6
+        "
+    >
+
+        <div>
+
+            <h2 class="text-2xl font-bold">
+                Recommended For You
+            </h2>
+
+
+            <p
+                class="
+                    text-xs
+                    text-base-content/60
+                    mt-1
+                "
+            >
+                Automatically curated based on your recent activity
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="recommendations-container"
+        class="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+        "
+    >
+
+        {% if recommended_products %}
+
+            {% for product in recommended_products %}
+
+                {% include 'includes/components/_product_card.html' with product=product %}
+
+            {% endfor %}
+
+        {% else %}
+
+            <div
+                class="
+                    col-span-full
+                    text-center
+                    py-8
+                    text-base-content/60
+                "
+            >
+
+                <span
+                    class="
+                        loading
+                        loading-spinner
+                        loading-md
+                    "
+                ></span>
+
+
+                <p class="text-sm mt-2">
+                    Loading personalized recommendations...
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CATEGORIES
+========================================================= -->
+
+<section
+    id="categories"
+    class="mb-12"
+>
+
+    <h2 class="text-2xl font-bold mb-6">
+        Browse Categories
+    </h2>
+
+
+    <div
+        class="
+            grid
+            grid-cols-2
+            sm:grid-cols-4
+            gap-4
+        "
+    >
+
+        {% for cat in categories %}
+
+            <a
+                href="{{ cat.get_absolute_url }}"
+                class="
+                    card
+                    bg-base-100
+                    border
+                    border-base-300
+                    p-5
+                    rounded-2xl
+                    hover:border-primary
+                    hover:shadow-lg
+                    transition-all
+                "
+            >
+
+                <h3 class="font-bold text-base">
+                    {{ cat.name }}
+                </h3>
+
+
+                <span
+                    class="
+                        text-xs
+                        text-primary
+                        mt-1
+                    "
+                >
+                    Explore →
+                </span>
+
+            </a>
+
+        {% empty %}
+
+            <div
+                class="
+                    col-span-full
+                    text-center
+                    py-6
+                    text-sm
+                    text-base-content/60
+                "
+            >
+                No categories available.
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURED PRODUCTS
+========================================================= -->
+
+<section class="mb-12">
+
+    <div
+        class="
+            flex
+            justify-between
+            items-center
+            mb-6
+        "
+    >
+
+        <h2 class="text-2xl font-bold">
+            Featured Releases
+        </h2>
+
+
+        <a
+            href="{% url 'products:product_list' %}"
+            class="
+                text-sm
+                font-bold
+                text-primary
+                hover:underline
+            "
+        >
+            View All →
+        </a>
+
+    </div>
+
+
+    <div
+        class="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+        "
+    >
+
+        {% for product in featured_products %}
+
+            {% include 'includes/components/_product_card.html' with product=product %}
+
+        {% empty %}
+
+            <div
+                class="
+                    col-span-full
+                    text-center
+                    py-6
+                    text-sm
+                    text-base-content/60
+                "
+            >
+                No featured products available.
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEVAI FLOATING BUTTON
+========================================================= -->
+
+<a
+    href="{% url 'search:new_chat' %}"
+    aria-label="Open DevAI Assistant"
+    title="Ask DevAI"
+    class="devai-button"
+>
+
+    <span class="devai-tooltip">
+        Ask DevAI
+    </span>
+
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        aria-hidden="true"
+    >
+
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2"
+        />
+
+
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 19v2"
+        />
+
+
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 12h2"
+        />
+
+
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19 12h2"
+        />
+
+
+        <rect
+            x="6"
+            y="6"
+            width="12"
+            height="12"
+            rx="4"
+        />
+
+
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 10h.01M15 10h.01"
+        />
+
+
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 14c.8.7 1.8 1 3 1s2.2-.3 3-1"
+        />
+
+    </svg>
+
+</a>
+
+
+<!-- =========================================================
+     DEVAI CSS
+========================================================= -->
+
+<style>
+
+.devai-button {
+    position: fixed !important;
+
+    right: 24px !important;
+    bottom: 24px !important;
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999 !important;
+
+    border-radius: 50%;
+
+    background: #570df8;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25),
+        0 0 0 5px rgba(87, 13, 248, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.devai-button:hover {
+
+    transform: scale(1.10);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.30),
+        0 0 0 6px rgba(87, 13, 248, 0.18);
+}
+
+
+.devai-button:active {
+
+    transform: scale(0.94);
+
+}
+
+
+.devai-button svg {
+
+    width: 32px;
+    height: 32px;
+
+}
+
+
+.devai-tooltip {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 76px;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    background: #111827;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(5px);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+
+    pointer-events: none;
+
+}
+
+
+.devai-button:hover .devai-tooltip {
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+@media (max-width: 640px) {
+
+    .devai-button {
+
+        width: 56px;
+        height: 56px;
+
+        right: 16px !important;
+        bottom: 16px !important;
+
+    }
+
+
+    .devai-button svg {
+
+        width: 28px;
+        height: 28px;
+
+    }
+
+
+    .devai-tooltip {
+
+        bottom: 68px;
+
+    }
+
+}
+
+</style>
+
+
+<!-- =========================================================
+     HOME ASSISTANT RESULT BRIDGE
+========================================================= -->
+
+<script>
+
+(function () {
+
+    function initializeHomeAssistantBridge() {
+
+        const homeResultsSection =
+            document.getElementById(
+                "home-assistant-results-section"
+            );
+
+
+        const homeResultsContainer =
+            document.getElementById(
+                "home-assistant-results"
+            );
+
+
+        const homeResultsTitle =
+            document.getElementById(
+                "home-assistant-results-title"
+            );
+
+
+        const homeResultsSubtitle =
+            document.getElementById(
+                "home-assistant-results-subtitle"
+            );
+
+
+        const homeClearButton =
+            document.getElementById(
+                "home-assistant-results-clear"
+            );
+
+
+        if (
+            !homeResultsSection ||
+            !homeResultsContainer
+        ) {
+
+            console.warn(
+                "Home assistant result container was not found."
+            );
+
+            return;
+
+        }
+
+
+        window.showHomeAssistantResults =
+            function () {
+
+                homeResultsSection.classList.remove(
+                    "hidden"
+                );
+
+            };
+
+
+        window.hideHomeAssistantResults =
+            function () {
+
+                homeResultsSection.classList.add(
+                    "hidden"
+                );
+
+            };
+
+
+        window.setHomeAssistantResultsTitle =
+            function (title) {
+
+                if (!homeResultsTitle) {
+                    return;
+                }
+
+                homeResultsTitle.textContent =
+                    title || "Search Results";
+
+            };
+
+
+        window.setHomeAssistantResultsSubtitle =
+            function (subtitle) {
+
+                if (!homeResultsSubtitle) {
+                    return;
+                }
+
+                homeResultsSubtitle.textContent =
+                    subtitle || "";
+
+            };
+
+
+        window.setHomeAssistantResults =
+            function (html) {
+
+                homeResultsContainer.innerHTML =
+                    html || "";
+
+            };
+
+
+        window.scrollToHomeAssistantResults =
+            function () {
+
+                homeResultsSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            };
+
+
+        if (homeClearButton) {
+
+            homeClearButton.addEventListener(
+                "click",
+                function () {
+
+                    window.hideHomeAssistantResults();
+
+
+                    if (
+                        typeof window.globalAssistantClearInput ===
+                        "function"
+                    ) {
+
+                        window.globalAssistantClearInput();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        console.log(
+            "Home assistant result bridge initialized."
+        );
+
+    }
+
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initializeHomeAssistantBridge
+        );
+
+    } else {
+
+        initializeHomeAssistantBridge();
+
+    }
+
+})();
+
+</script>
+
+{% endblock %}

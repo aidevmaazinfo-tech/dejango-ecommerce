@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Shopping Cart - DevStore{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-extrabold mb-8">Shopping Bag</h1>
+
+{% if cart|length > 0 %}
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Item List -->
+        <div class="lg:col-span-2 space-y-4">
+            {% for item in cart %}
+                {% with product=item.product %}
+                    <div class="card bg-base-100 border border-base-300 p-5 flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            {% if product.image %}
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-16 h-16 rounded-xl object-cover bg-base-200">
+                            {% endif %}
+                            <div>
+                                <h3 class="font-bold text-base">{{ product.name }}</h3>
+                                <p class="text-xs text-base-content/60">${{ item.price }} each</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6">
+                            <span class="font-bold text-base">${{ item.total_price }}</span>
+                            <form action="{% url 'cart:cart_remove' product.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-ghost btn-sm text-error">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                {% endwith %}
+            {% endfor %}
+        </div>
+
+        <!-- Summary -->
+        <div class="card bg-base-100 border border-base-300 p-6 h-fit">
+            <h2 class="font-bold text-lg mb-4">Summary</h2>
+            <div class="space-y-2 text-sm border-b border-base-300 pb-4">
+                <div class="flex justify-between"><span>Subtotal</span><span>${{ cart.get_total_price }}</span></div>
+                <div class="flex justify-between"><span>Shipping</span><span class="text-success font-bold">Free</span></div>
+            </div>
+            <div class="flex justify-between font-extrabold text-lg py-4">
+                <span>Total</span><span>${{ cart.get_total_price }}</span>
+            </div>
+            <a href="{% url 'orders:order_create' %}" class="btn btn-primary btn-block">
+                Proceed to Checkout
+            </a>
+        </div>
+    </div>
+{% else %}
+    <div class="card bg-base-100 border border-base-300 p-12 text-center">
+        <h2 class="text-xl font-bold">Your bag is empty</h2>
+        <a href="{% url 'products:product_list' %}" class="btn btn-primary btn-sm mt-4 self-center">Explore Store</a>
+    </div>
+{% endif %}
+{% endblock %}
